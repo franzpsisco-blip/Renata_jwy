@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 
 export default function HomePage() {
@@ -44,13 +43,10 @@ export default function HomePage() {
 
           <div className="relative z-10">
             <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[2rem] border border-black/10 bg-white shadow-soft">
-              <Image
-                src="/hero.jpg"
+              <img
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/hero.jpg`}
                 alt="Renata Jewelry — estética vintage"
-                fill
-                className="object-cover"
-                priority
-                sizes="(max-width: 768px) 100vw, 50vw"
+                className="h-full w-full object-cover"
               />
             </div>
             <p className="mt-3 text-xs text-black/50">
