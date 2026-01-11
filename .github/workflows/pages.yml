@@ -36,9 +36,7 @@ jobs:
         env:
           NEXT_PUBLIC_WHATSAPP_NUMBER_PRIMARY: "59176498138"
           NEXT_PUBLIC_CURRENCY_SYMBOL: "Bs"
-        run: |
-          npm run build
-          npx next export
+        run: npm run build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
