@@ -1,0 +1,20 @@
+[
+  {
+    "id": "AN-001",
+    "name": "Anillo Aurora Dorado",
+    "price": 320,
+    "image": "anillo-aurora.jpg",
+    "description": "Anillo dorado de inspiración vintage con acabado cálido.",
+    "category": "Anillos",
+    "inStock": 3
+  },
+  {
+    "id": "CO-001",
+    "name": "Collar Luna Antigua",
+    "price": 280,
+    "image": "collar-luna.jpg",
+    "description": "Collar delicado de inspiración antigua con brillo suave.",
+    "category": "Collares",
+    "inStock": 4
+  }
+]

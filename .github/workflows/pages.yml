@@ -1,0 +1,55 @@
+name: Deploy to GitHub Pages (Next export)
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build inventory JSON
+        run: npm run inventory:build
+
+      - name: Build & Export Next.js
+        env:
+          NEXT_PUBLIC_WHATSAPP_NUMBER_PRIMARY: "59176498138"
+          NEXT_PUBLIC_CURRENCY_SYMBOL: "Bs"
+        run: |
+          npm run build
+          npx next export
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
