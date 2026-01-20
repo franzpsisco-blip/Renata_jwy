@@ -1,6 +1,6 @@
 # Renata Jewelry — GitHub Pages (estático)
 
-Esta versión publica tu tienda en **GitHub Pages** (sin Vercel).
+Esta versión publica tu tienda en **GitHub Pages** .
 
 ## Publicar
 1) GitHub → Settings → Pages → Source: **GitHub Actions**
