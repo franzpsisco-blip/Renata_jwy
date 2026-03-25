@@ -14,10 +14,16 @@ import {
 } from "@/lib/discount";
 
 function resolveImageSrc(image: string) {
-  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-  if (!image) return `${base}/products/placeholder.svg`;
+  const basePath = process.env.NODE_ENV === "production" ? "/Renata_jwy" : "";
+
+  if (!image) return `${basePath}/products/placeholder.svg`;
   if (image.startsWith("http://") || image.startsWith("https://")) return image;
-  return `${base}/products/${image}`;
+
+  // Si ya viene como ruta completa desde public, por ejemplo /products/1.jpg
+  if (image.startsWith("/")) return `${basePath}${image}`;
+
+  // Si solo viene como nombre de archivo, por ejemplo 1.jpg
+  return `${basePath}/products/${image}`;
 }
 
 export function ProductCard({
@@ -49,7 +55,9 @@ export function ProductCard({
             <div className="mt-1 flex flex-wrap gap-2">
               {product.category ? <Badge>{product.category}</Badge> : null}
               {showDiscount ? (
-                <Badge className="border-ink bg-ink text-parchment">{getDiscountPercentLabel()}</Badge>
+                <Badge className="border-ink bg-ink text-parchment">
+                  {getDiscountPercentLabel()}
+                </Badge>
               ) : null}
             </div>
           </div>
@@ -68,7 +76,9 @@ export function ProductCard({
                 </div>
               </div>
             ) : (
-              <div className="text-sm font-medium">{formatMoney(product.price, currencySymbol)}</div>
+              <div className="text-sm font-medium">
+                {formatMoney(product.price, currencySymbol)}
+              </div>
             )}
           </div>
         </div>
@@ -76,7 +86,9 @@ export function ProductCard({
         {product.description ? (
           <p className="mt-2 line-clamp-2 text-sm text-black/70">{product.description}</p>
         ) : (
-          <p className="mt-2 text-sm text-black/60">Pieza vintage seleccionada con cuidado.</p>
+          <p className="mt-2 text-sm text-black/60">
+            Pieza vintage seleccionada con cuidado.
+          </p>
         )}
 
         <div className="mt-4 flex items-center justify-between">
