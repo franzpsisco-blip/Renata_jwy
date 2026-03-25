@@ -1,12 +1,15 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from "next";
+
+const repo = "Renata_jwy";
+
+const nextConfig: NextConfig = {
   output: "export",
-  images: { unoptimized: true },
-  basePath: "/Renata_jwy",
-  assetPrefix: "/Renata_jwy/",
-  env: {
-    NEXT_PUBLIC_BASE_PATH: "/Renata_jwy",
+  images: {
+    unoptimized: true,
   },
+  basePath: process.env.NODE_ENV === "production" ? `/${repo}` : "",
+  assetPrefix: process.env.NODE_ENV === "production" ? `/${repo}/` : "",
+  trailingSlash: true,
 };
 
-module.exports = nextConfig;
+export default nextConfig;
