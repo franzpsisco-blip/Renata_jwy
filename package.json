@@ -1,0 +1,35 @@
+{
+  "name": "renata-jewelry",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "inventory:check": "node scripts/check-inventory.mjs",
+    "inventory:build": "node scripts/xlsx-to-json.mjs",
+    "build:static": "npm run inventory:build && next build && next export"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "next": "^15.1.3",
+    "qrcode": "^1.5.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^2.5.5",
+    "xlsx": "^0.18.5",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "eslint": "^9.18.0",
+    "eslint-config-next": "^15.1.3",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3",
+    "@types/qrcode": "^1.5.5"
+  }
+}

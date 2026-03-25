@@ -1,0 +1,3098 @@
+[
+  {
+    "id": 1,
+    "name": "Anillo ajustable con perla - Modelo 1",
+    "price": 50.0,
+    "image": "1.jpg",
+    "description": "Anillo ajustable con perla natural y acabado dorado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 2,
+    "name": "Anillo ajustable con perla - Modelo 2",
+    "price": 50.0,
+    "image": "2.jpg",
+    "description": "Anillo ajustable con perla natural y acabado dorado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 3,
+    "name": "Anillo ajustable con perla - Modelo 3",
+    "price": 55.0,
+    "image": "3.jpg",
+    "description": "Anillo ajustable con perla natural y acabado dorado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 4,
+    "name": "Anillo ajustable con perla - Modelo 4",
+    "price": 55.0,
+    "image": "4.jpg",
+    "description": "Anillo ajustable con perla natural y acabado dorado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 5,
+    "name": "Anillo ajustable con perla - Modelo 5",
+    "price": 50.0,
+    "image": "5.jpg",
+    "description": "Anillo ajustable con perla natural y acabado dorado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 6,
+    "name": "Anillo ajustable con perla - Modelo 6",
+    "price": 40.0,
+    "image": "6.jpg",
+    "description": "Anillo ajustable con perla natural y acabado dorado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 7,
+    "name": "Anillo ajustable con perla - Modelo 7",
+    "price": 50.0,
+    "image": "7.jpg",
+    "description": "Anillo ajustable con perla natural y acabado dorado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 8,
+    "name": "Anillo ajustable con perla - Modelo 8",
+    "price": 40.0,
+    "image": "8.jpg",
+    "description": "Anillo ajustable con perla natural y acabado dorado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 9,
+    "name": "Anillo ajustable con perla - Modelo 9",
+    "price": 55.0,
+    "image": "9.jpg",
+    "description": "Anillo ajustable con perla natural y acabado dorado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 10,
+    "name": "Anillo ajustable con perla - Modelo 10",
+    "price": 50.0,
+    "image": "10.jpg",
+    "description": "Anillo ajustable con perla natural y acabado dorado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 11,
+    "name": "Anillo ajustable con perla - Modelo 11",
+    "price": 50.0,
+    "image": "11.jpg",
+    "description": "Anillo ajustable con perla natural y acabado dorado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 12,
+    "name": "Anillo ajustable con perla - Modelo 12",
+    "price": 50.0,
+    "image": "12.jpg",
+    "description": "Anillo ajustable con perla natural y acabado dorado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 13,
+    "name": "Anillo de mariposa nacarada - Modelo 1",
+    "price": 30.0,
+    "image": "13.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 14,
+    "name": "Anillo de mariposa nacarada - Modelo 2",
+    "price": 30.0,
+    "image": "14.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 15,
+    "name": "Anillo de mariposa nacarada - Modelo 3",
+    "price": 30.0,
+    "image": "15.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 16,
+    "name": "Anillo de mariposa nacarada - Modelo 4",
+    "price": 35.0,
+    "image": "16.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 17,
+    "name": "Anillo de mariposa nacarada - Modelo 5",
+    "price": 35.0,
+    "image": "17.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 18,
+    "name": "Anillo de mariposa nacarada - Modelo 6",
+    "price": 30.0,
+    "image": "18.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 19,
+    "name": "Anillo de mariposa nacarada - Modelo 7",
+    "price": 35.0,
+    "image": "19.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 20,
+    "name": "Anillo de mariposa nacarada - Modelo 8",
+    "price": 30.0,
+    "image": "20.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 3
+  },
+  {
+    "id": 21,
+    "name": "Anillo de mariposa nacarada - Modelo 9",
+    "price": 30.0,
+    "image": "21.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 22,
+    "name": "Anillo de mariposa nacarada - Modelo 10",
+    "price": 30.0,
+    "image": "22.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 23,
+    "name": "Anillo de mariposa nacarada - Modelo 11",
+    "price": 35.0,
+    "image": "23.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 24,
+    "name": "Anillo de mariposa nacarada - Modelo 12",
+    "price": 30.0,
+    "image": "24.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 25,
+    "name": "Anillo de mariposa nacarada - Modelo 13",
+    "price": 30.0,
+    "image": "25.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 26,
+    "name": "Anillo de mariposa nacarada - Modelo 14",
+    "price": 30.0,
+    "image": "26.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 27,
+    "name": "Anillo de mariposa nacarada - Modelo 15",
+    "price": 35.0,
+    "image": "27.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 28,
+    "name": "Anillo de mariposa nacarada - Modelo 16",
+    "price": 35.0,
+    "image": "28.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 29,
+    "name": "Anillo de mariposa nacarada - Modelo 17",
+    "price": 30.0,
+    "image": "29.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 30,
+    "name": "Anillo de mariposa nacarada - Modelo 18",
+    "price": 35.0,
+    "image": "30.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 31,
+    "name": "Anillo de mariposa nacarada - Modelo 19",
+    "price": 30.0,
+    "image": "31.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 32,
+    "name": "Anillo de mariposa nacarada - Modelo 20",
+    "price": 30.0,
+    "image": "32.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 33,
+    "name": "Anillo de mariposa nacarada - Modelo 21",
+    "price": 30.0,
+    "image": "33.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 34,
+    "name": "Anillo de mariposa nacarada - Modelo 22",
+    "price": 35.0,
+    "image": "34.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 35,
+    "name": "Anillo de mariposa nacarada - Modelo 23",
+    "price": 35.0,
+    "image": "35.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 36,
+    "name": "Anillo de mariposa nacarada - Modelo 24",
+    "price": 35.0,
+    "image": "36.jpg",
+    "description": "Anillo abierto con mariposa esmaltada y detalle nacarado.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 37,
+    "name": "Pendientes de perlas y cristales - Modelo 1",
+    "price": 55.0,
+    "image": "37.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 2
+  },
+  {
+    "id": 38,
+    "name": "Pendientes de perlas y cristales - Modelo 2",
+    "price": 60.0,
+    "image": "38.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 2
+  },
+  {
+    "id": 39,
+    "name": "Pendientes de perlas y cristales - Modelo 3",
+    "price": 45.0,
+    "image": "39.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 2
+  },
+  {
+    "id": 40,
+    "name": "Pendientes de perlas y cristales - Modelo 4",
+    "price": 60.0,
+    "image": "40.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 2
+  },
+  {
+    "id": 41,
+    "name": "Pendientes de perlas y cristales - Modelo 5",
+    "price": 35.0,
+    "image": "41.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 2
+  },
+  {
+    "id": 42,
+    "name": "Pendientes de perlas y cristales - Modelo 6",
+    "price": 55.0,
+    "image": "42.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 2
+  },
+  {
+    "id": 43,
+    "name": "Pendientes de perlas y cristales - Modelo 7",
+    "price": 50.0,
+    "image": "43.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 2
+  },
+  {
+    "id": 44,
+    "name": "Pendientes de perlas y cristales - Modelo 8",
+    "price": 50.0,
+    "image": "44.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 2
+  },
+  {
+    "id": 45,
+    "name": "Pendientes de perlas y cristales - Modelo 9",
+    "price": 40.0,
+    "image": "45.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 2
+  },
+  {
+    "id": 46,
+    "name": "Pendientes de perlas y cristales - Modelo 10",
+    "price": 45.0,
+    "image": "46.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 2
+  },
+  {
+    "id": 47,
+    "name": "Pendientes de perlas y cristales - Modelo 11",
+    "price": 45.0,
+    "image": "47.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 2
+  },
+  {
+    "id": 48,
+    "name": "Pendientes de perlas y cristales - Modelo 12",
+    "price": 45.0,
+    "image": "48.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 2
+  },
+  {
+    "id": 49,
+    "name": "Pendientes de perlas y cristales - Modelo 13",
+    "price": 60.0,
+    "image": "49.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 2
+  },
+  {
+    "id": 50,
+    "name": "Pendientes de perlas y cristales - Modelo 14",
+    "price": 45.0,
+    "image": "50.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 2
+  },
+  {
+    "id": 51,
+    "name": "Pendientes de perlas y cristales - Modelo 15",
+    "price": 60.0,
+    "image": "51.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 2
+  },
+  {
+    "id": 52,
+    "name": "Pendientes de perlas y cristales - Modelo 16",
+    "price": 40.0,
+    "image": "52.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 2
+  },
+  {
+    "id": 53,
+    "name": "Pendientes de perlas y cristales - Modelo 17",
+    "price": 60.0,
+    "image": "53.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 2
+  },
+  {
+    "id": 54,
+    "name": "Pendientes de perlas y cristales - Modelo 18",
+    "price": 75.0,
+    "image": "54.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 1
+  },
+  {
+    "id": 55,
+    "name": "Collar cubo de azúcar - Modelo 1",
+    "price": 20.0,
+    "image": "55.jpg",
+    "description": "Collar delicado con colgante geométrico y acabado dorado.",
+    "category": "Collares",
+    "inStock": 10
+  },
+  {
+    "id": 56,
+    "name": "Collar cubo de azúcar - Modelo 2",
+    "price": 40.0,
+    "image": "56.jpg",
+    "description": "Collar delicado con colgante geométrico y acabado dorado.",
+    "category": "Collares",
+    "inStock": 10
+  },
+  {
+    "id": 57,
+    "name": "Collar cubo de azúcar - Modelo 3",
+    "price": 25.0,
+    "image": "57.jpg",
+    "description": "Collar delicado con colgante geométrico y acabado dorado.",
+    "category": "Collares",
+    "inStock": 10
+  },
+  {
+    "id": 58,
+    "name": "Collar cubo de azúcar - Modelo 4",
+    "price": 30.0,
+    "image": "58.jpg",
+    "description": "Collar delicado con colgante geométrico y acabado dorado.",
+    "category": "Collares",
+    "inStock": 10
+  },
+  {
+    "id": 59,
+    "name": "Collar cubo de azúcar - Modelo 5",
+    "price": 30.0,
+    "image": "59.jpg",
+    "description": "Collar delicado con colgante geométrico y acabado dorado.",
+    "category": "Collares",
+    "inStock": 10
+  },
+  {
+    "id": 60,
+    "name": "Collar cubo de azúcar - Modelo 6",
+    "price": 35.0,
+    "image": "60.jpg",
+    "description": "Collar delicado con colgante geométrico y acabado dorado.",
+    "category": "Collares",
+    "inStock": 10
+  },
+  {
+    "id": 61,
+    "name": "Aros circulares retro - Modelo 1",
+    "price": 25.0,
+    "image": "61.jpg",
+    "description": "Aros circulares con estilo retro y presencia marcada.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 62,
+    "name": "Aros circulares retro - Modelo 2",
+    "price": 25.0,
+    "image": "62.jpg",
+    "description": "Aros circulares con estilo retro y presencia marcada.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 63,
+    "name": "Pendientes vintage estilo óleo - Modelo 1",
+    "price": 30.0,
+    "image": "63.jpg",
+    "description": "Pendientes artísticos con inspiración vintage y efecto óleo.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 64,
+    "name": "Pendientes vintage estilo óleo - Modelo 2",
+    "price": 50.0,
+    "image": "64.jpg",
+    "description": "Pendientes artísticos con inspiración vintage y efecto óleo.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 65,
+    "name": "Pendientes vintage estilo óleo - Modelo 3",
+    "price": 70.0,
+    "image": "65.jpg",
+    "description": "Pendientes artísticos con inspiración vintage y efecto óleo.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 66,
+    "name": "Pendientes vintage estilo óleo - Modelo 4",
+    "price": 45.0,
+    "image": "66.jpg",
+    "description": "Pendientes artísticos con inspiración vintage y efecto óleo.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 67,
+    "name": "Pendientes vintage estilo óleo - Modelo 5",
+    "price": 60.0,
+    "image": "67.jpg",
+    "description": "Pendientes artísticos con inspiración vintage y efecto óleo.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 68,
+    "name": "Pendientes vintage estilo óleo - Modelo 6",
+    "price": 30.0,
+    "image": "68.jpg",
+    "description": "Pendientes artísticos con inspiración vintage y efecto óleo.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 69,
+    "name": "Pendientes vintage estilo óleo - Modelo 7",
+    "price": 60.0,
+    "image": "69.jpg",
+    "description": "Pendientes artísticos con inspiración vintage y efecto óleo.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 70,
+    "name": "Pendientes mariposa vintage",
+    "price": 60.0,
+    "image": "70.jpg",
+    "description": "Pendientes de mariposa con acabado esmaltado y aire vintage.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 71,
+    "name": "Pendientes vintage estilo óleo - Modelo 8",
+    "price": 45.0,
+    "image": "71.jpg",
+    "description": "Pendientes artísticos con inspiración vintage y efecto óleo.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 72,
+    "name": "Pendientes vintage estilo óleo - Modelo 9",
+    "price": 40.0,
+    "image": "72.jpg",
+    "description": "Pendientes artísticos con inspiración vintage y efecto óleo.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 73,
+    "name": "Pendientes Murano morado",
+    "price": 470.0,
+    "image": "73.jpg",
+    "description": "Pendientes con cristal Murano en tono morado.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 74,
+    "name": "Collar con rodonita - Modelo 1",
+    "price": 75.0,
+    "image": "74.jpg",
+    "description": "Collar vintage con colgante de rodonita y brillo sutil.",
+    "category": "Collares",
+    "inStock": 10
+  },
+  {
+    "id": 75,
+    "name": "Collar con rodonita - Modelo 2",
+    "price": 75.0,
+    "image": "75.jpg",
+    "description": "Collar vintage con colgante de rodonita y brillo sutil.",
+    "category": "Collares",
+    "inStock": 10
+  },
+  {
+    "id": 76,
+    "name": "Collar con rodonita - Modelo 3",
+    "price": 75.0,
+    "image": "76.jpg",
+    "description": "Collar vintage con colgante de rodonita y brillo sutil.",
+    "category": "Collares",
+    "inStock": 10
+  },
+  {
+    "id": 77,
+    "name": "Collar con rodonita - Modelo 4",
+    "price": 70.0,
+    "image": "77.jpg",
+    "description": "Collar vintage con colgante de rodonita y brillo sutil.",
+    "category": "Collares",
+    "inStock": 10
+  },
+  {
+    "id": 78,
+    "name": "Collar con rodonita - Modelo 5",
+    "price": 85.0,
+    "image": "78.jpg",
+    "description": "Collar vintage con colgante de rodonita y brillo sutil.",
+    "category": "Collares",
+    "inStock": 10
+  },
+  {
+    "id": 79,
+    "name": "Collar con rodonita - Modelo 6",
+    "price": 65.0,
+    "image": "79.jpg",
+    "description": "Collar vintage con colgante de rodonita y brillo sutil.",
+    "category": "Collares",
+    "inStock": 10
+  },
+  {
+    "id": 80,
+    "name": "Collar de perlas y fresas - Modelo 1",
+    "price": 75.0,
+    "image": "80.jpg",
+    "description": "Collar alegre con perlas y detalle de fresas.",
+    "category": "Collares",
+    "inStock": 10
+  },
+  {
+    "id": 81,
+    "name": "Collar de perlas y fresas - Modelo 2",
+    "price": 75.0,
+    "image": "81.jpg",
+    "description": "Collar alegre con perlas y detalle de fresas.",
+    "category": "Collares",
+    "inStock": 10
+  },
+  {
+    "id": 82,
+    "name": "Pendientes hada del bosque - Modelo 1",
+    "price": 45.0,
+    "image": "82.jpg",
+    "description": "Pendientes de fantasía con acabado esmaltado y estilo bosque.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 83,
+    "name": "Pendientes hada del bosque - Modelo 2",
+    "price": 35.0,
+    "image": "83.jpg",
+    "description": "Pendientes de fantasía con acabado esmaltado y estilo bosque.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 84,
+    "name": "Pendientes hada del bosque - Modelo 3",
+    "price": 40.0,
+    "image": "84.jpg",
+    "description": "Pendientes de fantasía con acabado esmaltado y estilo bosque.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 85,
+    "name": "Pendientes hada del bosque - Modelo 4",
+    "price": 30.0,
+    "image": "85.jpg",
+    "description": "Pendientes de fantasía con acabado esmaltado y estilo bosque.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 86,
+    "name": "Pendientes hada del bosque - Modelo 5",
+    "price": 35.0,
+    "image": "86.jpg",
+    "description": "Pendientes de fantasía con acabado esmaltado y estilo bosque.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 87,
+    "name": "Pendientes hada del bosque - Modelo 6",
+    "price": 35.0,
+    "image": "87.jpg",
+    "description": "Pendientes de fantasía con acabado esmaltado y estilo bosque.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 88,
+    "name": "Pendientes hada del bosque - Modelo 7",
+    "price": 35.0,
+    "image": "88.jpg",
+    "description": "Pendientes de fantasía con acabado esmaltado y estilo bosque.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 89,
+    "name": "Accesorio de diseño",
+    "price": 30.0,
+    "image": "89.jpg",
+    "description": "Accesorio moderno de diseño sencillo y versátil.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 90,
+    "name": "Pendientes lazo con perlas - Modelo 1",
+    "price": 25.0,
+    "image": "90.jpg",
+    "description": "Pendientes de lazo con circonitas y perlas, delicados y femeninos.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 91,
+    "name": "Pendientes lazo con perlas - Modelo 2",
+    "price": 25.0,
+    "image": "91.jpg",
+    "description": "Pendientes de lazo con circonitas y perlas, delicados y femeninos.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 92,
+    "name": "Pendientes lazo con perlas - Modelo 3",
+    "price": 20.0,
+    "image": "92.jpg",
+    "description": "Pendientes de lazo con circonitas y perlas, delicados y femeninos.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 93,
+    "name": "Pendientes lazo con perlas - Modelo 4",
+    "price": 20.0,
+    "image": "93.jpg",
+    "description": "Pendientes de lazo con circonitas y perlas, delicados y femeninos.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 94,
+    "name": "Pendientes lazo con perlas - Modelo 5",
+    "price": 20.0,
+    "image": "94.jpg",
+    "description": "Pendientes de lazo con circonitas y perlas, delicados y femeninos.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 95,
+    "name": "Pendientes lazo con perlas - Modelo 6",
+    "price": 20.0,
+    "image": "95.jpg",
+    "description": "Pendientes de lazo con circonitas y perlas, delicados y femeninos.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 96,
+    "name": "Pendientes lazo con perlas - Modelo 7",
+    "price": 25.0,
+    "image": "96.jpg",
+    "description": "Pendientes de lazo con circonitas y perlas, delicados y femeninos.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 97,
+    "name": "Pendientes lazo con perlas - Modelo 8",
+    "price": 20.0,
+    "image": "97.jpg",
+    "description": "Pendientes de lazo con circonitas y perlas, delicados y femeninos.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 98,
+    "name": "Pendientes lazo con perlas - Modelo 9",
+    "price": 20.0,
+    "image": "98.jpg",
+    "description": "Pendientes de lazo con circonitas y perlas, delicados y femeninos.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 99,
+    "name": "Pendientes lazo con perlas - Modelo 10",
+    "price": 20.0,
+    "image": "99.jpg",
+    "description": "Pendientes de lazo con circonitas y perlas, delicados y femeninos.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 100,
+    "name": "Pendientes lazo con perlas - Modelo 11",
+    "price": 25.0,
+    "image": "100.jpg",
+    "description": "Pendientes de lazo con circonitas y perlas, delicados y femeninos.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 101,
+    "name": "Pendientes lazo con perlas - Modelo 12",
+    "price": 20.0,
+    "image": "101.jpg",
+    "description": "Pendientes de lazo con circonitas y perlas, delicados y femeninos.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 102,
+    "name": "Collar de titanio - Modelo 1",
+    "price": 80.0,
+    "image": "102.jpg",
+    "description": "Collar minimalista de titanio, resistente y fácil de combinar.",
+    "category": "Collares",
+    "inStock": 5
+  },
+  {
+    "id": 103,
+    "name": "Collar de titanio - Modelo 2",
+    "price": 75.0,
+    "image": "103.jpg",
+    "description": "Collar minimalista de titanio, resistente y fácil de combinar.",
+    "category": "Collares",
+    "inStock": 5
+  },
+  {
+    "id": 104,
+    "name": "Collar de titanio - Modelo 3",
+    "price": 75.0,
+    "image": "104.jpg",
+    "description": "Collar minimalista de titanio, resistente y fácil de combinar.",
+    "category": "Collares",
+    "inStock": 5
+  },
+  {
+    "id": 105,
+    "name": "Pendientes girasol dorado - Modelo 1",
+    "price": 50.0,
+    "image": "105.jpg",
+    "description": "Pendientes dorados con diseño de girasol y aire sofisticado.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 106,
+    "name": "Pendientes girasol dorado - Modelo 2",
+    "price": 50.0,
+    "image": "106.jpg",
+    "description": "Pendientes dorados con diseño de girasol y aire sofisticado.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 107,
+    "name": "Pendientes girasol dorado - Modelo 3",
+    "price": 50.0,
+    "image": "107.jpg",
+    "description": "Pendientes dorados con diseño de girasol y aire sofisticado.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 108,
+    "name": "Pendientes girasol dorado - Modelo 4",
+    "price": 50.0,
+    "image": "108.jpg",
+    "description": "Pendientes dorados con diseño de girasol y aire sofisticado.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 109,
+    "name": "Pendientes girasol dorado - Modelo 5",
+    "price": 50.0,
+    "image": "109.jpg",
+    "description": "Pendientes dorados con diseño de girasol y aire sofisticado.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 110,
+    "name": "Pendientes rosa de tela",
+    "price": 35.0,
+    "image": "110.jpg",
+    "description": "Pendientes con rosa de tela y estilo romántico.",
+    "category": "Aretes",
+    "inStock": 12
+  },
+  {
+    "id": 111,
+    "name": "Pulsera flor de cuatro pétalos - Modelo 1",
+    "price": 30.0,
+    "image": "111.jpg",
+    "description": "Pulsera delicada con flor de cuatro pétalos y circonitas.",
+    "category": "Pulseras",
+    "inStock": 5
+  },
+  {
+    "id": 112,
+    "name": "Pulsera flor de cuatro pétalos - Modelo 2",
+    "price": 35.0,
+    "image": "112.jpg",
+    "description": "Pulsera delicada con flor de cuatro pétalos y circonitas.",
+    "category": "Pulseras",
+    "inStock": 5
+  },
+  {
+    "id": 113,
+    "name": "Pulsera flor de cuatro pétalos - Modelo 3",
+    "price": 45.0,
+    "image": "113.jpg",
+    "description": "Pulsera delicada con flor de cuatro pétalos y circonitas.",
+    "category": "Pulseras",
+    "inStock": 5
+  },
+  {
+    "id": 114,
+    "name": "Pulsera flor de cuatro pétalos - Modelo 4",
+    "price": 30.0,
+    "image": "114.jpg",
+    "description": "Pulsera delicada con flor de cuatro pétalos y circonitas.",
+    "category": "Pulseras",
+    "inStock": 5
+  },
+  {
+    "id": 115,
+    "name": "Pendientes clip azul",
+    "price": 25.0,
+    "image": "115.jpg",
+    "description": "Pendientes clip geométricos en tono azul.",
+    "category": "Aretes",
+    "inStock": 11
+  },
+  {
+    "id": 116,
+    "name": "Pendientes borla dopamina - Modelo 1",
+    "price": 40.0,
+    "image": "116.jpg",
+    "description": "Pendientes con borlas y estilo alegre, ideales para looks llamativos.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 117,
+    "name": "Pendientes borla dopamina - Modelo 2",
+    "price": 40.0,
+    "image": "117.jpg",
+    "description": "Pendientes con borlas y estilo alegre, ideales para looks llamativos.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 118,
+    "name": "Pendientes borla dopamina - Modelo 3",
+    "price": 45.0,
+    "image": "118.jpg",
+    "description": "Pendientes con borlas y estilo alegre, ideales para looks llamativos.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 119,
+    "name": "Pendientes de perlas y flores - Modelo 1",
+    "price": 30.0,
+    "image": "119.jpg",
+    "description": "Pendientes con perlas y flores de estilo romántico.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 120,
+    "name": "Pendientes de perlas y flores - Modelo 2",
+    "price": 35.0,
+    "image": "120.jpg",
+    "description": "Pendientes con perlas y flores de estilo romántico.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 121,
+    "name": "Pendientes corazón esmaltado - Modelo 1",
+    "price": 45.0,
+    "image": "121.jpg",
+    "description": "Pendientes de corazón esmaltado con estilo romántico.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 122,
+    "name": "Pendientes corazón esmaltado - Modelo 2",
+    "price": 50.0,
+    "image": "122.jpg",
+    "description": "Pendientes de corazón esmaltado con estilo romántico.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 123,
+    "name": "Pendientes corazón esmaltado - Modelo 3",
+    "price": 45.0,
+    "image": "123.jpg",
+    "description": "Pendientes de corazón esmaltado con estilo romántico.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 124,
+    "name": "Pendientes corazón esmaltado - Modelo 4",
+    "price": 30.0,
+    "image": "124.jpg",
+    "description": "Pendientes de corazón esmaltado con estilo romántico.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 125,
+    "name": "Pendientes corazón esmaltado - Modelo 5",
+    "price": 40.0,
+    "image": "125.jpg",
+    "description": "Pendientes de corazón esmaltado con estilo romántico.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 126,
+    "name": "Pendientes corazón esmaltado - Modelo 6",
+    "price": 30.0,
+    "image": "126.jpg",
+    "description": "Pendientes de corazón esmaltado con estilo romántico.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 127,
+    "name": "Pendientes corazón esmaltado - Modelo 7",
+    "price": 40.0,
+    "image": "127.jpg",
+    "description": "Pendientes de corazón esmaltado con estilo romántico.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 128,
+    "name": "Pendientes corazón esmaltado - Modelo 8",
+    "price": 45.0,
+    "image": "128.jpg",
+    "description": "Pendientes de corazón esmaltado con estilo romántico.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 129,
+    "name": "Pendientes corazón esmaltado - Modelo 9",
+    "price": 25.0,
+    "image": "129.jpg",
+    "description": "Pendientes de corazón esmaltado con estilo romántico.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 130,
+    "name": "Pendientes corazón esmaltado - Modelo 10",
+    "price": 35.0,
+    "image": "130.jpg",
+    "description": "Pendientes de corazón esmaltado con estilo romántico.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 131,
+    "name": "Pendientes corazón esmaltado - Modelo 11",
+    "price": 30.0,
+    "image": "131.jpg",
+    "description": "Pendientes de corazón esmaltado con estilo romántico.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 132,
+    "name": "Pendientes ojo de gato - Modelo 1",
+    "price": 35.0,
+    "image": "132.jpg",
+    "description": "Pendientes con diseño ojo de gato y brillo delicado.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 133,
+    "name": "Pendientes ojo de gato - Modelo 2",
+    "price": 30.0,
+    "image": "133.jpg",
+    "description": "Pendientes con diseño ojo de gato y brillo delicado.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 134,
+    "name": "Pendientes ojo de gato - Modelo 3",
+    "price": 55.0,
+    "image": "134.jpg",
+    "description": "Pendientes con diseño ojo de gato y brillo delicado.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 135,
+    "name": "Pendientes ojo de gato - Modelo 4",
+    "price": 25.0,
+    "image": "135.jpg",
+    "description": "Pendientes con diseño ojo de gato y brillo delicado.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 136,
+    "name": "Pendientes ojo de gato - Modelo 5",
+    "price": 30.0,
+    "image": "136.jpg",
+    "description": "Pendientes con diseño ojo de gato y brillo delicado.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 137,
+    "name": "Pendientes de perlas y cristales - Modelo 19",
+    "price": 60.0,
+    "image": "137.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 138,
+    "name": "Pendientes de perlas y cristales - Modelo 20",
+    "price": 45.0,
+    "image": "138.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 139,
+    "name": "Pendientes de perlas y cristales - Modelo 21",
+    "price": 60.0,
+    "image": "139.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 15
+  },
+  {
+    "id": 140,
+    "name": "Pendientes de perlas y cristales - Modelo 22",
+    "price": 55.0,
+    "image": "140.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 141,
+    "name": "Pendientes de perlas y cristales - Modelo 23",
+    "price": 35.0,
+    "image": "141.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 142,
+    "name": "Pendientes de perlas y cristales - Modelo 24",
+    "price": 55.0,
+    "image": "142.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 143,
+    "name": "Pendientes de perlas y cristales - Modelo 25",
+    "price": 50.0,
+    "image": "143.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 144,
+    "name": "Pendientes de perlas y cristales - Modelo 26",
+    "price": 40.0,
+    "image": "144.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 145,
+    "name": "Pendientes de perlas y cristales - Modelo 27",
+    "price": 35.0,
+    "image": "145.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 146,
+    "name": "Pendientes de perlas y cristales - Modelo 28",
+    "price": 45.0,
+    "image": "146.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 15
+  },
+  {
+    "id": 147,
+    "name": "Pendientes de perlas y cristales - Modelo 29",
+    "price": 45.0,
+    "image": "147.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 15
+  },
+  {
+    "id": 148,
+    "name": "Pendientes de perlas y cristales - Modelo 30",
+    "price": 60.0,
+    "image": "148.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 15
+  },
+  {
+    "id": 149,
+    "name": "Pendientes de perlas y cristales - Modelo 31",
+    "price": 45.0,
+    "image": "149.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 150,
+    "name": "Pendientes de perlas y cristales - Modelo 32",
+    "price": 40.0,
+    "image": "150.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 15
+  },
+  {
+    "id": 151,
+    "name": "Pendientes de perlas y cristales - Modelo 33",
+    "price": 60.0,
+    "image": "151.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 152,
+    "name": "Pendientes de perlas y cristales - Modelo 34",
+    "price": 45.0,
+    "image": "152.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 153,
+    "name": "Pendientes de perlas y cristales - Modelo 35",
+    "price": 50.0,
+    "image": "153.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 154,
+    "name": "Pendientes de perlas y cristales - Modelo 36",
+    "price": 50.0,
+    "image": "154.jpg",
+    "description": "Pendientes largos con perlas y cristales de brillo elegante.",
+    "category": "Aretes",
+    "inStock": 15
+  },
+  {
+    "id": 155,
+    "name": "Pendientes flor mini - Modelo 1",
+    "price": 50.0,
+    "image": "155.jpg",
+    "description": "Pendientes pequeños de flor con acabado fresco y ligero.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 156,
+    "name": "Pendientes flor mini - Modelo 2",
+    "price": 15.0,
+    "image": "156.jpg",
+    "description": "Pendientes pequeños de flor con acabado fresco y ligero.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 157,
+    "name": "Pendientes flor mini - Modelo 3",
+    "price": 35.0,
+    "image": "157.jpg",
+    "description": "Pendientes pequeños de flor con acabado fresco y ligero.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 158,
+    "name": "Pendientes flor mini - Modelo 4",
+    "price": 30.0,
+    "image": "158.jpg",
+    "description": "Pendientes pequeños de flor con acabado fresco y ligero.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 159,
+    "name": "Pendientes flor mini - Modelo 5",
+    "price": 50.0,
+    "image": "159.jpg",
+    "description": "Pendientes pequeños de flor con acabado fresco y ligero.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 160,
+    "name": "Pendientes flor mini - Modelo 6",
+    "price": 50.0,
+    "image": "160.jpg",
+    "description": "Pendientes pequeños de flor con acabado fresco y ligero.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 161,
+    "name": "Pendientes flor mini - Modelo 7",
+    "price": 35.0,
+    "image": "161.jpg",
+    "description": "Pendientes pequeños de flor con acabado fresco y ligero.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 162,
+    "name": "Pendientes flor mini - Modelo 8",
+    "price": 50.0,
+    "image": "162.jpg",
+    "description": "Pendientes pequeños de flor con acabado fresco y ligero.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 163,
+    "name": "Pendientes flor mini - Modelo 9",
+    "price": 55.0,
+    "image": "163.jpg",
+    "description": "Pendientes pequeños de flor con acabado fresco y ligero.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 164,
+    "name": "Pendientes flor mini - Modelo 10",
+    "price": 50.0,
+    "image": "164.jpg",
+    "description": "Pendientes pequeños de flor con acabado fresco y ligero.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 165,
+    "name": "Pendientes flor con borlas - Modelo 1",
+    "price": 30.0,
+    "image": "165.jpg",
+    "description": "Pendientes largos de flor con borlas y caída elegante.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 166,
+    "name": "Pendientes flor con borlas - Modelo 2",
+    "price": 40.0,
+    "image": "166.jpg",
+    "description": "Pendientes largos de flor con borlas y caída elegante.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 167,
+    "name": "Pendientes flor con borlas - Modelo 3",
+    "price": 40.0,
+    "image": "167.jpg",
+    "description": "Pendientes largos de flor con borlas y caída elegante.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 168,
+    "name": "Pendientes flor con borlas - Modelo 4",
+    "price": 90.0,
+    "image": "168.jpg",
+    "description": "Pendientes largos de flor con borlas y caída elegante.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 169,
+    "name": "Pendientes flor con borlas - Modelo 5",
+    "price": 45.0,
+    "image": "169.jpg",
+    "description": "Pendientes largos de flor con borlas y caída elegante.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 170,
+    "name": "Pendientes flor con borlas - Modelo 6",
+    "price": 65.0,
+    "image": "170.jpg",
+    "description": "Pendientes largos de flor con borlas y caída elegante.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 171,
+    "name": "Pendientes flor con borlas - Modelo 7",
+    "price": 60.0,
+    "image": "171.jpg",
+    "description": "Pendientes largos de flor con borlas y caída elegante.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 172,
+    "name": "Pendientes flor con borlas - Modelo 8",
+    "price": 50.0,
+    "image": "172.jpg",
+    "description": "Pendientes largos de flor con borlas y caída elegante.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 173,
+    "name": "Pendientes pluma con cristal - Modelo 1",
+    "price": 45.0,
+    "image": "173.jpg",
+    "description": "Pendientes ligeros con plumas y cristales de estilo étnico.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 174,
+    "name": "Pendientes pluma con cristal - Modelo 2",
+    "price": 40.0,
+    "image": "174.jpg",
+    "description": "Pendientes ligeros con plumas y cristales de estilo étnico.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 175,
+    "name": "Pendientes pluma con cristal - Modelo 3",
+    "price": 45.0,
+    "image": "175.jpg",
+    "description": "Pendientes ligeros con plumas y cristales de estilo étnico.",
+    "category": "Aretes",
+    "inStock": 2
+  },
+  {
+    "id": 176,
+    "name": "Pendientes pluma con cristal - Modelo 4",
+    "price": 45.0,
+    "image": "176.jpg",
+    "description": "Pendientes ligeros con plumas y cristales de estilo étnico.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 177,
+    "name": "Pendientes pluma con cristal - Modelo 5",
+    "price": 40.0,
+    "image": "177.jpg",
+    "description": "Pendientes ligeros con plumas y cristales de estilo étnico.",
+    "category": "Aretes",
+    "inStock": 3
+  },
+  {
+    "id": 178,
+    "name": "Collar Monet de perlas - Modelo 1",
+    "price": 95.0,
+    "image": "178.jpg",
+    "description": "Collar con perlas barrocas e inspiración artística Monet.",
+    "category": "Collares",
+    "inStock": 5
+  },
+  {
+    "id": 179,
+    "name": "Collar Monet de perlas - Modelo 2",
+    "price": 85.0,
+    "image": "179.jpg",
+    "description": "Collar con perlas barrocas e inspiración artística Monet.",
+    "category": "Collares",
+    "inStock": 5
+  },
+  {
+    "id": 180,
+    "name": "Collar Monet de perlas - Modelo 3",
+    "price": 145.0,
+    "image": "180.jpg",
+    "description": "Collar con perlas barrocas e inspiración artística Monet.",
+    "category": "Collares",
+    "inStock": 5
+  },
+  {
+    "id": 181,
+    "name": "Collar Monet de perlas - Modelo 4",
+    "price": 95.0,
+    "image": "181.jpg",
+    "description": "Collar con perlas barrocas e inspiración artística Monet.",
+    "category": "Collares",
+    "inStock": 5
+  },
+  {
+    "id": 182,
+    "name": "Collar Monet de perlas - Modelo 5",
+    "price": 95.0,
+    "image": "182.jpg",
+    "description": "Collar con perlas barrocas e inspiración artística Monet.",
+    "category": "Collares",
+    "inStock": 5
+  },
+  {
+    "id": 183,
+    "name": "Collar Monet de perlas - Modelo 6",
+    "price": 115.0,
+    "image": "183.jpg",
+    "description": "Collar con perlas barrocas e inspiración artística Monet.",
+    "category": "Collares",
+    "inStock": 5
+  },
+  {
+    "id": 184,
+    "name": "Collar Monet de perlas - Modelo 7",
+    "price": 80.0,
+    "image": "184.jpg",
+    "description": "Collar con perlas barrocas e inspiración artística Monet.",
+    "category": "Collares",
+    "inStock": 5
+  },
+  {
+    "id": 185,
+    "name": "Collar Monet de perlas - Modelo 8",
+    "price": 105.0,
+    "image": "185.jpg",
+    "description": "Collar con perlas barrocas e inspiración artística Monet.",
+    "category": "Collares",
+    "inStock": 5
+  },
+  {
+    "id": 186,
+    "name": "Collar Monet de perlas - Modelo 9",
+    "price": 105.0,
+    "image": "186.jpg",
+    "description": "Collar con perlas barrocas e inspiración artística Monet.",
+    "category": "Collares",
+    "inStock": 5
+  },
+  {
+    "id": 187,
+    "name": "Pendientes de fresa - Modelo 1",
+    "price": 90.0,
+    "image": "187.jpg",
+    "description": "Pendientes dulces con detalle de fresa y esmalte de color.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 188,
+    "name": "Pendientes de fresa - Modelo 2",
+    "price": 105.0,
+    "image": "188.jpg",
+    "description": "Pendientes dulces con detalle de fresa y esmalte de color.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 189,
+    "name": "Pendientes de fresa - Modelo 3",
+    "price": 95.0,
+    "image": "189.jpg",
+    "description": "Pendientes dulces con detalle de fresa y esmalte de color.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 190,
+    "name": "Accesorio barroco de perla - Modelo 1",
+    "price": 85.0,
+    "image": "190.jpg",
+    "description": "Accesorio barroco con perla natural y aire vintage.",
+    "category": "Anillos",
+    "inStock": 10
+  },
+  {
+    "id": 191,
+    "name": "Accesorio barroco de perla - Modelo 2",
+    "price": 80.0,
+    "image": "191.jpg",
+    "description": "Accesorio barroco con perla natural y aire vintage.",
+    "category": "Anillos",
+    "inStock": 10
+  },
+  {
+    "id": 192,
+    "name": "Accesorio barroco de perla - Modelo 3",
+    "price": 80.0,
+    "image": "192.jpg",
+    "description": "Accesorio barroco con perla natural y aire vintage.",
+    "category": "Anillos",
+    "inStock": 10
+  },
+  {
+    "id": 193,
+    "name": "Accesorio barroco de perla - Modelo 4",
+    "price": 80.0,
+    "image": "193.jpg",
+    "description": "Accesorio barroco con perla natural y aire vintage.",
+    "category": "Anillos",
+    "inStock": 10
+  },
+  {
+    "id": 194,
+    "name": "Accesorio barroco de perla - Modelo 5",
+    "price": 80.0,
+    "image": "194.jpg",
+    "description": "Accesorio barroco con perla natural y aire vintage.",
+    "category": "Anillos",
+    "inStock": 10
+  },
+  {
+    "id": 195,
+    "name": "Accesorio barroco de perla - Modelo 6",
+    "price": 75.0,
+    "image": "195.jpg",
+    "description": "Accesorio barroco con perla natural y aire vintage.",
+    "category": "Anillos",
+    "inStock": 10
+  },
+  {
+    "id": 196,
+    "name": "Accesorio barroco de perla - Modelo 7",
+    "price": 80.0,
+    "image": "196.jpg",
+    "description": "Accesorio barroco con perla natural y aire vintage.",
+    "category": "Anillos",
+    "inStock": 10
+  },
+  {
+    "id": 197,
+    "name": "Accesorio barroco de perla - Modelo 8",
+    "price": 80.0,
+    "image": "197.jpg",
+    "description": "Accesorio barroco con perla natural y aire vintage.",
+    "category": "Anillos",
+    "inStock": 10
+  },
+  {
+    "id": 198,
+    "name": "Accesorio barroco de perla - Modelo 9",
+    "price": 80.0,
+    "image": "198.jpg",
+    "description": "Accesorio barroco con perla natural y aire vintage.",
+    "category": "Anillos",
+    "inStock": 10
+  },
+  {
+    "id": 199,
+    "name": "Anillo barroco abierto - Modelo 1",
+    "price": 110.0,
+    "image": "199.jpg",
+    "description": "Anillo abierto de inspiración barroca con acabado elegante.",
+    "category": "Anillos",
+    "inStock": 10
+  },
+  {
+    "id": 200,
+    "name": "Anillo barroco abierto - Modelo 2",
+    "price": 70.0,
+    "image": "200.jpg",
+    "description": "Anillo abierto de inspiración barroca con acabado elegante.",
+    "category": "Anillos",
+    "inStock": 5
+  },
+  {
+    "id": 201,
+    "name": "Anillo barroco abierto - Modelo 3",
+    "price": 65.0,
+    "image": "201.jpg",
+    "description": "Anillo abierto de inspiración barroca con acabado elegante.",
+    "category": "Anillos",
+    "inStock": 10
+  },
+  {
+    "id": 202,
+    "name": "Pendientes retrato con borlas - Modelo 1",
+    "price": 40.0,
+    "image": "202.jpg",
+    "description": "Pendientes con retrato decorativo, flores y borlas.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 203,
+    "name": "Pendientes retrato con borlas - Modelo 2",
+    "price": 40.0,
+    "image": "203.jpg",
+    "description": "Pendientes con retrato decorativo, flores y borlas.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 204,
+    "name": "Pendientes mariposa con perla - Modelo 1",
+    "price": 50.0,
+    "image": "204.jpg",
+    "description": "Pendientes de mariposa con perla y detalle verde.",
+    "category": "Aretes",
+    "inStock": 2
+  },
+  {
+    "id": 205,
+    "name": "Pendientes mariposa con perla - Modelo 2",
+    "price": 55.0,
+    "image": "205.jpg",
+    "description": "Pendientes de mariposa con perla y detalle verde.",
+    "category": "Aretes",
+    "inStock": 2
+  },
+  {
+    "id": 206,
+    "name": "Pendientes mariposa con perla - Modelo 3",
+    "price": 55.0,
+    "image": "206.jpg",
+    "description": "Pendientes de mariposa con perla y detalle verde.",
+    "category": "Aretes",
+    "inStock": 2
+  },
+  {
+    "id": 207,
+    "name": "Pendientes Monet - Modelo 1",
+    "price": 45.0,
+    "image": "207.jpg",
+    "description": "Pendientes inspirados en Monet con acabado delicado y artístico.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 208,
+    "name": "Pendientes Monet - Modelo 2",
+    "price": 45.0,
+    "image": "208.jpg",
+    "description": "Pendientes inspirados en Monet con acabado delicado y artístico.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 209,
+    "name": "Pendientes Monet - Modelo 3",
+    "price": 60.0,
+    "image": "209.jpg",
+    "description": "Pendientes inspirados en Monet con acabado delicado y artístico.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 210,
+    "name": "Pendientes Monet - Modelo 4",
+    "price": 40.0,
+    "image": "210.jpg",
+    "description": "Pendientes inspirados en Monet con acabado delicado y artístico.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 211,
+    "name": "Pendientes Monet - Modelo 5",
+    "price": 45.0,
+    "image": "211.jpg",
+    "description": "Pendientes inspirados en Monet con acabado delicado y artístico.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 212,
+    "name": "Pendientes Monet - Modelo 6",
+    "price": 70.0,
+    "image": "212.jpg",
+    "description": "Pendientes inspirados en Monet con acabado delicado y artístico.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 213,
+    "name": "Pendientes mariposa y cristal - Modelo 1",
+    "price": 30.0,
+    "image": "213.jpg",
+    "description": "Pendientes largos con mariposa y cristal morado.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 214,
+    "name": "Pendientes mariposa y cristal - Modelo 2",
+    "price": 25.0,
+    "image": "214.jpg",
+    "description": "Pendientes largos con mariposa y cristal morado.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 215,
+    "name": "Pendientes mariposa y cristal - Modelo 3",
+    "price": 30.0,
+    "image": "215.jpg",
+    "description": "Pendientes largos con mariposa y cristal morado.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 216,
+    "name": "Pendientes mariposa y cristal - Modelo 4",
+    "price": 70.0,
+    "image": "216.jpg",
+    "description": "Pendientes largos con mariposa y cristal morado.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 217,
+    "name": "Pendientes mariposa y cristal - Modelo 5",
+    "price": 35.0,
+    "image": "217.jpg",
+    "description": "Pendientes largos con mariposa y cristal morado.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 218,
+    "name": "Pendientes mariposa y cristal - Modelo 6",
+    "price": 25.0,
+    "image": "218.jpg",
+    "description": "Pendientes largos con mariposa y cristal morado.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 219,
+    "name": "Pendientes mariposa y cristal - Modelo 7",
+    "price": 35.0,
+    "image": "219.jpg",
+    "description": "Pendientes largos con mariposa y cristal morado.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 220,
+    "name": "Pendientes mariposa y cristal - Modelo 8",
+    "price": 60.0,
+    "image": "220.jpg",
+    "description": "Pendientes largos con mariposa y cristal morado.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 221,
+    "name": "Pendientes mariposa y cristal - Modelo 9",
+    "price": 30.0,
+    "image": "221.jpg",
+    "description": "Pendientes largos con mariposa y cristal morado.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 222,
+    "name": "Pendientes mariposa y cristal - Modelo 10",
+    "price": 35.0,
+    "image": "222.jpg",
+    "description": "Pendientes largos con mariposa y cristal morado.",
+    "category": "Aretes",
+    "inStock": 5
+  },
+  {
+    "id": 223,
+    "name": "Pendientes mariposa y cristal - Modelo 11",
+    "price": 45.0,
+    "image": "223.jpg",
+    "description": "Pendientes largos con mariposa y cristal morado.",
+    "category": "Aretes",
+    "inStock": 10
+  },
+  {
+    "id": 224,
+    "name": "Bolso de felpa con cadena - Taro",
+    "price": 55.0,
+    "image": "224.jpg",
+    "description": "Bolso de felpa con cadena y detalle divertido. Color Taro.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 225,
+    "name": "Bolso de felpa con cadena - Negro",
+    "price": 55.0,
+    "image": "225.jpg",
+    "description": "Bolso de felpa con cadena y detalle divertido. Color Negro.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 226,
+    "name": "Bolso de felpa con cadena - Rosa claro",
+    "price": 55.0,
+    "image": "226.jpg",
+    "description": "Bolso de felpa con cadena y detalle divertido. Color Rosa claro.",
+    "category": "Bolsos",
+    "inStock": 3
+  },
+  {
+    "id": 227,
+    "name": "Bolso de felpa con cadena - Beige",
+    "price": 55.0,
+    "image": "227.jpg",
+    "description": "Bolso de felpa con cadena y detalle divertido. Color Beige.",
+    "category": "Bolsos",
+    "inStock": 3
+  },
+  {
+    "id": 228,
+    "name": "Bolso de ratán perrito - Perrito",
+    "price": 40.0,
+    "image": "228.jpg",
+    "description": "Bolso de ratán con diseño artesanal de perrito. Color Perrito.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 229,
+    "name": "Bolso de ratán perrito - Natural",
+    "price": 70.0,
+    "image": "229.jpg",
+    "description": "Bolso de ratán con diseño artesanal de perrito. Color Natural.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 230,
+    "name": "Bolso de ratán perrito - Accesorios",
+    "price": 70.0,
+    "image": "230.jpg",
+    "description": "Bolso de ratán con diseño artesanal de perrito. Color Accesorios.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 231,
+    "name": "Bolso de ratán perrito - Mango de bambú - Modelo 1",
+    "price": 95.0,
+    "image": "231.jpg",
+    "description": "Bolso de ratán con diseño artesanal de perrito. Color Mango de bambú.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 232,
+    "name": "Bolso de ratán perrito - Mango de bambú - Modelo 2",
+    "price": 90.0,
+    "image": "232.jpg",
+    "description": "Bolso de ratán con diseño artesanal de perrito. Color Mango de bambú.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 233,
+    "name": "Bolso de ratán perrito - Mango de bambú - Modelo 3",
+    "price": 95.0,
+    "image": "233.jpg",
+    "description": "Bolso de ratán con diseño artesanal de perrito. Color Mango de bambú.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 234,
+    "name": "Bolso de ratán perrito - Mango de bambú - Modelo 4",
+    "price": 95.0,
+    "image": "234.jpg",
+    "description": "Bolso de ratán con diseño artesanal de perrito. Color Mango de bambú.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 235,
+    "name": "Bolso de ratán perrito - Mango de bambú - Modelo 5",
+    "price": 95.0,
+    "image": "235.jpg",
+    "description": "Bolso de ratán con diseño artesanal de perrito. Color Mango de bambú.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 236,
+    "name": "Bolso de ratán perrito - Mango de bambú - Modelo 6",
+    "price": 90.0,
+    "image": "236.jpg",
+    "description": "Bolso de ratán con diseño artesanal de perrito. Color Mango de bambú.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 237,
+    "name": "Bolso de ratán perrito - Accesorios de correa de hombro larga de seis colores",
+    "price": 80.0,
+    "image": "237.jpg",
+    "description": "Bolso de ratán con diseño artesanal de perrito. Color Accesorios de correa de hombro larga de seis colores.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 238,
+    "name": "Bolso de ratán perrito - Mango de bambú - Modelo 7",
+    "price": 90.0,
+    "image": "238.jpg",
+    "description": "Bolso de ratán con diseño artesanal de perrito. Color Mango de bambú.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 239,
+    "name": "Bolso de ratán perrito - Mango de bambú - Modelo 8",
+    "price": 90.0,
+    "image": "239.jpg",
+    "description": "Bolso de ratán con diseño artesanal de perrito. Color Mango de bambú.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 240,
+    "name": "Bolso cubo bicolor - Azul",
+    "price": 140.0,
+    "image": "240.jpg",
+    "description": "Bolso tipo cubo con contraste de color y look moderno. Color Azul.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 241,
+    "name": "Bolso cubo bicolor - Negro",
+    "price": 140.0,
+    "image": "241.jpg",
+    "description": "Bolso tipo cubo con contraste de color y look moderno. Color Negro.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 242,
+    "name": "Bolso cubo bicolor - Blanco",
+    "price": 140.0,
+    "image": "242.jpg",
+    "description": "Bolso tipo cubo con contraste de color y look moderno. Color Blanco.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 243,
+    "name": "Bolso cubo bicolor - Blanco y negro",
+    "price": 130.0,
+    "image": "243.jpg",
+    "description": "Bolso tipo cubo con contraste de color y look moderno. Color Blanco y negro.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 244,
+    "name": "Bolso bowling retro",
+    "price": 140.0,
+    "image": "244.jpg",
+    "description": "Bolso tipo bowling con textura retro y tamaño compacto.",
+    "category": "Bolsos",
+    "inStock": 3
+  },
+  {
+    "id": 245,
+    "name": "Bolso de hombro grande - Negro",
+    "price": 100.0,
+    "image": "245.jpg",
+    "description": "Bolso de hombro amplio para uso diario. Color Negro.",
+    "category": "Bolsos",
+    "inStock": 6
+  },
+  {
+    "id": 246,
+    "name": "Bolso de hombro grande - Marrón",
+    "price": 100.0,
+    "image": "246.jpg",
+    "description": "Bolso de hombro amplio para uso diario. Color Marrón.",
+    "category": "Bolsos",
+    "inStock": 6
+  },
+  {
+    "id": 247,
+    "name": "Bolso de hombro grande - Burdeos",
+    "price": 100.0,
+    "image": "247.jpg",
+    "description": "Bolso de hombro amplio para uso diario. Color Burdeos.",
+    "category": "Bolsos",
+    "inStock": 6
+  },
+  {
+    "id": 248,
+    "name": "Bolso tweed pequeño - Tweed",
+    "price": 95.0,
+    "image": "248.jpg",
+    "description": "Bolso pequeño de tweed con aire clásico. Color Tweed.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 249,
+    "name": "Bolso mensajero básico - Negro",
+    "price": 125.0,
+    "image": "249.jpg",
+    "description": "Bolso mensajero simple y fácil de combinar. Color Negro.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 250,
+    "name": "Bolso de hombro a cuadros - Rosa",
+    "price": 105.0,
+    "image": "250.jpg",
+    "description": "Bolso de hombro a cuadros con estilo dulce. Color Rosa.",
+    "category": "Bolsos",
+    "inStock": 1
+  },
+  {
+    "id": 251,
+    "name": "Bolso baguette - Negro",
+    "price": 100.0,
+    "image": "251.jpg",
+    "description": "Bolso baguette de líneas limpias y estilo moderno. Color Negro.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 252,
+    "name": "Bolso de viaje clásico - Marrón",
+    "price": 115.0,
+    "image": "252.jpg",
+    "description": "Bolso versátil de viaje con formato cómodo. Color Marrón.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 253,
+    "name": "Bolso bowling grande - Azul",
+    "price": 110.0,
+    "image": "253.jpg",
+    "description": "Bolso bowling amplio con estilo retro. Color Azul.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 254,
+    "name": "Bolso bowling grande - Negro",
+    "price": 110.0,
+    "image": "254.jpg",
+    "description": "Bolso bowling amplio con estilo retro. Color Negro.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 255,
+    "name": "Bolso bowling grande - Blanco",
+    "price": 110.0,
+    "image": "255.jpg",
+    "description": "Bolso bowling amplio con estilo retro. Color Blanco.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 256,
+    "name": "Bolso bowling grande - Marrón",
+    "price": 110.0,
+    "image": "256.jpg",
+    "description": "Bolso bowling amplio con estilo retro. Color Marrón.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 257,
+    "name": "Bolso bowling retro - Negro",
+    "price": 140.0,
+    "image": "257.jpg",
+    "description": "Bolso tipo bowling con textura retro y tamaño compacto. Color Negro.",
+    "category": "Bolsos",
+    "inStock": 3
+  },
+  {
+    "id": 258,
+    "name": "Bolso bowling retro - Burdeos",
+    "price": 140.0,
+    "image": "258.jpg",
+    "description": "Bolso tipo bowling con textura retro y tamaño compacto. Color Burdeos.",
+    "category": "Bolsos",
+    "inStock": 3
+  },
+  {
+    "id": 259,
+    "name": "Bolso denim Fat Cat - Azul denim",
+    "price": 130.0,
+    "image": "259.jpg",
+    "description": "Bolso denim con diseño llamativo y estilo casual. Color Azul denim.",
+    "category": "Bolsos",
+    "inStock": 3
+  },
+  {
+    "id": 260,
+    "name": "Mini bolso de cordero - Caqui",
+    "price": 110.0,
+    "image": "260.jpg",
+    "description": "Mini bolso suave con acabado de piel sintética. Color Caqui.",
+    "category": "Bolsos",
+    "inStock": 5
+  },
+  {
+    "id": 261,
+    "name": "Mini bolso de encaje",
+    "price": 105.0,
+    "image": "261.jpg",
+    "description": "Mini bolso delicado con detalle de encaje.",
+    "category": "Bolsos",
+    "inStock": 4
+  },
+  {
+    "id": 262,
+    "name": "Bolso de noche irregular - Naranja",
+    "price": 125.0,
+    "image": "262.jpg",
+    "description": "Bolso de noche estructurado con forma irregular. Color Naranja.",
+    "category": "Bolsos",
+    "inStock": 1
+  },
+  {
+    "id": 263,
+    "name": "Bolso de noche irregular - Morado claro",
+    "price": 125.0,
+    "image": "263.jpg",
+    "description": "Bolso de noche estructurado con forma irregular. Color Morado claro.",
+    "category": "Bolsos",
+    "inStock": 1
+  },
+  {
+    "id": 264,
+    "name": "Bolso de fiesta pavo real - Plata",
+    "price": 180.0,
+    "image": "264.jpg",
+    "description": "Bolso de fiesta con brillo y detalle inspirado en pavo real. Color Plata.",
+    "category": "Bolsos",
+    "inStock": 1
+  },
+  {
+    "id": 265,
+    "name": "Bolso de fiesta pavo real - Verde",
+    "price": 180.0,
+    "image": "265.jpg",
+    "description": "Bolso de fiesta con brillo y detalle inspirado en pavo real. Color Verde.",
+    "category": "Bolsos",
+    "inStock": 1
+  },
+  {
+    "id": 266,
+    "name": "Bolso de fiesta pavo real - Negro",
+    "price": 180.0,
+    "image": "266.jpg",
+    "description": "Bolso de fiesta con brillo y detalle inspirado en pavo real. Color Negro.",
+    "category": "Bolsos",
+    "inStock": 1
+  },
+  {
+    "id": 267,
+    "name": "Bolso floral de fiesta - Caqui",
+    "price": 200.0,
+    "image": "267.jpg",
+    "description": "Bolso floral ideal para fiesta o evento. Color Caqui.",
+    "category": "Bolsos",
+    "inStock": 3
+  },
+  {
+    "id": 268,
+    "name": "Bolso floral de fiesta - Rosa",
+    "price": 200.0,
+    "image": "268.jpg",
+    "description": "Bolso floral ideal para fiesta o evento. Color Rosa.",
+    "category": "Bolsos",
+    "inStock": 3
+  },
+  {
+    "id": 269,
+    "name": "Bolso floral de fiesta - Blanco roto",
+    "price": 200.0,
+    "image": "269.jpg",
+    "description": "Bolso floral ideal para fiesta o evento. Color Blanco roto.",
+    "category": "Bolsos",
+    "inStock": 3
+  },
+  {
+    "id": 270,
+    "name": "Bolso floral de novia - Champán",
+    "price": 155.0,
+    "image": "270.jpg",
+    "description": "Bolso floral elegante para novia o ceremonia. Color Champán.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 271,
+    "name": "Bolso floral de novia - Rosa",
+    "price": 155.0,
+    "image": "271.jpg",
+    "description": "Bolso floral elegante para novia o ceremonia. Color Rosa.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 272,
+    "name": "Bolso floral de novia - Negro",
+    "price": 155.0,
+    "image": "272.jpg",
+    "description": "Bolso floral elegante para novia o ceremonia. Color Negro.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 273,
+    "name": "Bolso cubo texturizado - Caqui",
+    "price": 125.0,
+    "image": "273.jpg",
+    "description": "Bolso cubo con textura marcada y look elegante. Color Caqui.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 274,
+    "name": "Bolso cubo texturizado - Negro",
+    "price": 125.0,
+    "image": "274.jpg",
+    "description": "Bolso cubo con textura marcada y look elegante. Color Negro.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 275,
+    "name": "Bolso cubo texturizado - Marrón - Modelo 1",
+    "price": 125.0,
+    "image": "275.jpg",
+    "description": "Bolso cubo con textura marcada y look elegante. Color Marrón.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 276,
+    "name": "Bolso cubo texturizado - Marrón - Modelo 2",
+    "price": 125.0,
+    "image": "276.jpg",
+    "description": "Bolso cubo con textura marcada y look elegante. Color Marrón.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 277,
+    "name": "Bolso retro afelpado - Marrón",
+    "price": 130.0,
+    "image": "277.jpg",
+    "description": "Bolso suave con acabado afelpado y estilo retro. Color Marrón.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 278,
+    "name": "Bolso retro afelpado - Rosa",
+    "price": 130.0,
+    "image": "278.jpg",
+    "description": "Bolso suave con acabado afelpado y estilo retro. Color Rosa.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 279,
+    "name": "Bolso media luna - Negro",
+    "price": 125.0,
+    "image": "279.jpg",
+    "description": "Bolso media luna cómodo para uso diario. Color Negro.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 280,
+    "name": "Bolso media luna - Blanco luz de luna",
+    "price": 125.0,
+    "image": "280.jpg",
+    "description": "Bolso media luna cómodo para uso diario. Color Blanco luz de luna.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 281,
+    "name": "Bolso media luna - Rojo cereza",
+    "price": 125.0,
+    "image": "281.jpg",
+    "description": "Bolso media luna cómodo para uso diario. Color Rojo cereza.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 282,
+    "name": "Bolso media luna - Marrón retro",
+    "price": 125.0,
+    "image": "282.jpg",
+    "description": "Bolso media luna cómodo para uso diario. Color Marrón retro.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 283,
+    "name": "Bolso media luna - Castaño",
+    "price": 125.0,
+    "image": "283.jpg",
+    "description": "Bolso media luna cómodo para uso diario. Color Castaño.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 284,
+    "name": "Bolso Maillard - Rosa",
+    "price": 110.0,
+    "image": "284.jpg",
+    "description": "Bolso de tonos neutros con estética Maillard. Color Rosa.",
+    "category": "Bolsos",
+    "inStock": 4
+  },
+  {
+    "id": 285,
+    "name": "Bolso Maillard - Blanco roto",
+    "price": 110.0,
+    "image": "285.jpg",
+    "description": "Bolso de tonos neutros con estética Maillard. Color Blanco roto.",
+    "category": "Bolsos",
+    "inStock": 4
+  },
+  {
+    "id": 286,
+    "name": "Bolso Maillard - Negro",
+    "price": 105.0,
+    "image": "286.jpg",
+    "description": "Bolso de tonos neutros con estética Maillard. Color Negro.",
+    "category": "Bolsos",
+    "inStock": 4
+  },
+  {
+    "id": 287,
+    "name": "Bolso mensajero creativo - Rosa",
+    "price": 180.0,
+    "image": "287.jpg",
+    "description": "Bolso mensajero con diseño creativo y juvenil. Color Rosa.",
+    "category": "Bolsos",
+    "inStock": 1
+  },
+  {
+    "id": 288,
+    "name": "Bolso mensajero creativo - Blanco",
+    "price": 180.0,
+    "image": "288.jpg",
+    "description": "Bolso mensajero con diseño creativo y juvenil. Color Blanco.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 289,
+    "name": "Bolso mensajero creativo - Rosa intenso",
+    "price": 180.0,
+    "image": "289.jpg",
+    "description": "Bolso mensajero con diseño creativo y juvenil. Color Rosa intenso.",
+    "category": "Bolsos",
+    "inStock": 1
+  },
+  {
+    "id": 290,
+    "name": "Bolso mensajero creativo - Negro",
+    "price": 180.0,
+    "image": "290.jpg",
+    "description": "Bolso mensajero con diseño creativo y juvenil. Color Negro.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 291,
+    "name": "Bolso estampado artístico - Rosa",
+    "price": 155.0,
+    "image": "291.jpg",
+    "description": "Bolso de hombro con estampado artístico. Color Rosa.",
+    "category": "Bolsos",
+    "inStock": 1
+  },
+  {
+    "id": 292,
+    "name": "Bolso estampado artístico - Negro",
+    "price": 155.0,
+    "image": "292.jpg",
+    "description": "Bolso de hombro con estampado artístico. Color Negro.",
+    "category": "Bolsos",
+    "inStock": 1
+  },
+  {
+    "id": 293,
+    "name": "Bolso corazón con cadena - Rojo",
+    "price": 110.0,
+    "image": "293.jpg",
+    "description": "Bolso pequeño con detalle de corazón y cadena. Color Rojo.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 294,
+    "name": "Bolso corazón con cadena - Negro",
+    "price": 110.0,
+    "image": "294.jpg",
+    "description": "Bolso pequeño con detalle de corazón y cadena. Color Negro.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 295,
+    "name": "Bolso denim con borlas - Azul",
+    "price": 105.0,
+    "image": "295.jpg",
+    "description": "Bolso denim con borlas y aire casual. Color Azul.",
+    "category": "Bolsos",
+    "inStock": 1
+  },
+  {
+    "id": 296,
+    "name": "Bolso denim con borlas - Negro",
+    "price": 105.0,
+    "image": "296.jpg",
+    "description": "Bolso denim con borlas y aire casual. Color Negro.",
+    "category": "Bolsos",
+    "inStock": 1
+  },
+  {
+    "id": 297,
+    "name": "Bolso denim con borlas - Azul oscuro",
+    "price": 105.0,
+    "image": "297.jpg",
+    "description": "Bolso denim con borlas y aire casual. Color Azul oscuro.",
+    "category": "Bolsos",
+    "inStock": 1
+  },
+  {
+    "id": 298,
+    "name": "Bolso biker con lazo - Azul",
+    "price": 90.0,
+    "image": "298.jpg",
+    "description": "Bolso de hombro con lazo metálico y estilo biker. Color Azul.",
+    "category": "Bolsos",
+    "inStock": 1
+  },
+  {
+    "id": 299,
+    "name": "Bolso biker con lazo - Negro",
+    "price": 90.0,
+    "image": "299.jpg",
+    "description": "Bolso de hombro con lazo metálico y estilo biker. Color Negro.",
+    "category": "Bolsos",
+    "inStock": 2
+  },
+  {
+    "id": 300,
+    "name": "Bolso biker con lazo - Plata",
+    "price": 90.0,
+    "image": "300.jpg",
+    "description": "Bolso de hombro con lazo metálico y estilo biker. Color Plata.",
+    "category": "Bolsos",
+    "inStock": 1
+  },
+  {
+    "id": 301,
+    "name": "Bolso cruzado impermeable azul lago",
+    "price": 100.0,
+    "image": "301.jpg",
+    "description": "Bolso cruzado impermeable estilo deportivo en color azul lago.",
+    "category": "Bolsos",
+    "inStock": 7
+  },
+  {
+    "id": 302,
+    "name": "Bolso cruzado impermeable naranja",
+    "price": 100.0,
+    "image": "302.jpg",
+    "description": "Bolso cruzado impermeable estilo deportivo en color naranja.",
+    "category": "Bolsos",
+    "inStock": 6
+  },
+  {
+    "id": 303,
+    "name": "Bolso cruzado impermeable verde militar",
+    "price": 100.0,
+    "image": "303.jpg",
+    "description": "Bolso cruzado impermeable estilo deportivo en color verde militar.",
+    "category": "Bolsos",
+    "inStock": 7
+  },
+  {
+    "id": 304,
+    "name": "Bolso cruzado impermeable azul marino",
+    "price": 100.0,
+    "image": "304.jpg",
+    "description": "Bolso cruzado impermeable estilo deportivo en color azul marino.",
+    "category": "Bolsos",
+    "inStock": 7
+  },
+  {
+    "id": 305,
+    "name": "Bolso cruzado impermeable gris",
+    "price": 100.0,
+    "image": "305.jpg",
+    "description": "Bolso cruzado impermeable estilo deportivo en color gris.",
+    "category": "Bolsos",
+    "inStock": 5
+  },
+  {
+    "id": 306,
+    "name": "Bolso cruzado impermeable azul real",
+    "price": 100.0,
+    "image": "306.jpg",
+    "description": "Bolso cruzado impermeable estilo deportivo en color azul real.",
+    "category": "Bolsos",
+    "inStock": 8
+  },
+  {
+    "id": 307,
+    "name": "Bolso cruzado impermeable negro",
+    "price": 100.0,
+    "image": "307.jpg",
+    "description": "Bolso cruzado impermeable estilo deportivo en color negro.",
+    "category": "Bolsos",
+    "inStock": 10
+  },
+  {
+    "id": 308,
+    "name": "Bolso bandolera vintage negro",
+    "price": 120.0,
+    "image": "308.jpg",
+    "description": "Bolso bandolera vintage en color negro.",
+    "category": "Bolsos",
+    "inStock": 25
+  },
+  {
+    "id": 309,
+    "name": "Bolso bandolera vintage marrón",
+    "price": 120.0,
+    "image": "309.jpg",
+    "description": "Bolso bandolera vintage en color marrón.",
+    "category": "Bolsos",
+    "inStock": 16
+  },
+  {
+    "id": 310,
+    "name": "Bolso bandolera vintage caqui",
+    "price": 120.0,
+    "image": "310.jpg",
+    "description": "Bolso bandolera vintage en color caqui.",
+    "category": "Bolsos",
+    "inStock": 8
+  },
+  {
+    "id": 311,
+    "name": "Licuadora portátil 1300 ml azul",
+    "price": 125.0,
+    "image": "311.jpg",
+    "description": "Licuadora portátil de 1300 ml con cuchilla de 38 hojas, color azul.",
+    "category": "Otros",
+    "inStock": 40
+  },
+  {
+    "id": 312,
+    "name": "Licuadora portátil 1300 ml blanca",
+    "price": 125.0,
+    "image": "312.jpg",
+    "description": "Licuadora portátil de 1300 ml con cuchilla de 38 hojas, color blanco.",
+    "category": "Otros",
+    "inStock": 40
+  },
+  {
+    "id": 313,
+    "name": "Vaso térmico jardín rosa blanca 500 ml",
+    "price": 75.0,
+    "image": "313.jpg",
+    "description": "Vaso térmico de 500 ml con diseño jardín rosa blanca.",
+    "category": "Otros",
+    "inStock": 10
+  },
+  {
+    "id": 314,
+    "name": "Vaso térmico jardín girasol 500 ml",
+    "price": 75.0,
+    "image": "314.jpg",
+    "description": "Vaso térmico de 500 ml con diseño jardín girasol.",
+    "category": "Otros",
+    "inStock": 10
+  },
+  {
+    "id": 315,
+    "name": "Vaso térmico jardín adelfa 500 ml",
+    "price": 75.0,
+    "image": "315.jpg",
+    "description": "Vaso térmico de 500 ml con diseño jardín adelfa.",
+    "category": "Otros",
+    "inStock": 10
+  },
+  {
+    "id": 316,
+    "name": "Vaso térmico jardín lirio 500 ml",
+    "price": 75.0,
+    "image": "316.jpg",
+    "description": "Vaso térmico de 500 ml con diseño jardín lirio.",
+    "category": "Otros",
+    "inStock": 10
+  },
+  {
+    "id": 317,
+    "name": "Termo labubu 420 ml blanco marfil",
+    "price": 75.0,
+    "image": "317.jpg",
+    "description": "Termo de 420 ml en color blanco marfil.",
+    "category": "Otros",
+    "inStock": 10
+  },
+  {
+    "id": 318,
+    "name": "Termo labubu 420 ml rosa",
+    "price": 75.0,
+    "image": "318.jpg",
+    "description": "Termo de 420 ml en color rosa.",
+    "category": "Otros",
+    "inStock": 10
+  },
+  {
+    "id": 319,
+    "name": "Termo labubu 420 ml durazno",
+    "price": 75.0,
+    "image": "319.jpg",
+    "description": "Termo de 420 ml en color durazno.",
+    "category": "Otros",
+    "inStock": 10
+  },
+  {
+    "id": 320,
+    "name": "Termo labubu 420 ml negro",
+    "price": 75.0,
+    "image": "320.jpg",
+    "description": "Termo de 420 ml en color negro.",
+    "category": "Otros",
+    "inStock": 5
+  },
+  {
+    "id": 321,
+    "name": "Termo labubu 420 ml azul cielo",
+    "price": 75.0,
+    "image": "321.jpg",
+    "description": "Termo de 420 ml en color azul cielo.",
+    "category": "Otros",
+    "inStock": 5
+  },
+  {
+    "id": 322,
+    "name": "Taza termo 14 oz rosa roja",
+    "price": 100.0,
+    "image": "322.jpg",
+    "description": "Taza termo de 14 oz con diseño rosa roja.",
+    "category": "Otros",
+    "inStock": 8
+  },
+  {
+    "id": 323,
+    "name": "Taza termo 14 oz magnolia azul",
+    "price": 100.0,
+    "image": "323.jpg",
+    "description": "Taza termo de 14 oz con diseño magnolia azul.",
+    "category": "Otros",
+    "inStock": 9
+  },
+  {
+    "id": 324,
+    "name": "Taza termo 14 oz granada rosa",
+    "price": 100.0,
+    "image": "324.jpg",
+    "description": "Taza termo de 14 oz con diseño granada rosa.",
+    "category": "Otros",
+    "inStock": 8
+  },
+  {
+    "id": 325,
+    "name": "Taza termo 14 oz rosa claro",
+    "price": 100.0,
+    "image": "325.jpg",
+    "description": "Taza termo de 14 oz con diseño rosa claro.",
+    "category": "Otros",
+    "inStock": 8
+  },
+  {
+    "id": 326,
+    "name": "Taza termo 14 oz granada azul",
+    "price": 100.0,
+    "image": "326.jpg",
+    "description": "Taza termo de 14 oz con diseño granada azul.",
+    "category": "Otros",
+    "inStock": 9
+  },
+  {
+    "id": 327,
+    "name": "Taza termo 14 oz hibisco púrpura",
+    "price": 100.0,
+    "image": "327.jpg",
+    "description": "Taza termo de 14 oz con diseño hibisco púrpura.",
+    "category": "Otros",
+    "inStock": 8
+  },
+  {
+    "id": 328,
+    "name": "Taza termo 40 oz hibisco púrpura",
+    "price": 120.0,
+    "image": "328.jpg",
+    "description": "Taza termo de 40 oz con diseño hibisco púrpura.",
+    "category": "Otros",
+    "inStock": 4
+  },
+  {
+    "id": 329,
+    "name": "Taza termo 40 oz rosa claro",
+    "price": 120.0,
+    "image": "329.jpg",
+    "description": "Taza termo de 40 oz con diseño rosa claro.",
+    "category": "Otros",
+    "inStock": 4
+  },
+  {
+    "id": 330,
+    "name": "Taza termo 40 oz granada rosa",
+    "price": 120.0,
+    "image": "330.jpg",
+    "description": "Taza termo de 40 oz con diseño granada rosa.",
+    "category": "Otros",
+    "inStock": 4
+  },
+  {
+    "id": 331,
+    "name": "Taza termo 40 oz rosa roja",
+    "price": 120.0,
+    "image": "331.jpg",
+    "description": "Taza termo de 40 oz con diseño rosa roja.",
+    "category": "Otros",
+    "inStock": 4
+  },
+  {
+    "id": 332,
+    "name": "Taza termo 40 oz jazmin",
+    "price": 120.0,
+    "image": "332.jpg",
+    "description": "Taza termo de 40 oz con diseño granada azul.",
+    "category": "Otros",
+    "inStock": 4
+  },
+  {
+    "id": 333,
+    "name": "Taza termo 40 oz girasoles",
+    "price": 120.0,
+    "image": "333.jpg",
+    "description": "Taza termo de 40 oz con diseño magnolia azul.",
+    "category": "Otros",
+    "inStock": 5
+  },
+  {
+    "id": 334,
+    "name": "Taza termo VOGE rosada",
+    "price": 100.0,
+    "image": "334.jpg",
+    "description": "Taza termo VOGE en color rosado.",
+    "category": "Otros",
+    "inStock": 10
+  },
+  {
+    "id": 335,
+    "name": "Taza termo VOGE negra",
+    "price": 100.0,
+    "image": "335.jpg",
+    "description": "Taza termo VOGE en color negro.",
+    "category": "Otros",
+    "inStock": 10
+  },
+  {
+    "id": 336,
+    "name": "Taza termo VOGE blanca",
+    "price": 100.0,
+    "image": "336.jpg",
+    "description": "Taza termo VOGE en color blanco.",
+    "category": "Otros",
+    "inStock": 10
+  },
+  {
+    "id": 337,
+    "name": "Licuadora portátil rosa doble vaso",
+    "price": 85.0,
+    "image": "337.jpg",
+    "description": "Licuadora portátil recargable en color rosa, 6 cuchillas y doble vaso.",
+    "category": "Otros",
+    "inStock": 30
+  },
+  {
+    "id": 338,
+    "name": "Licuadora portátil negra doble vaso",
+    "price": 85.0,
+    "image": "338.jpg",
+    "description": "Licuadora portátil recargable en color negro, 6 cuchillas y doble vaso.",
+    "category": "Otros",
+    "inStock": 30
+  },
+  {
+    "id": 339,
+    "name": "Licuadora + tomatodo 350 ml",
+    "price": 160.0,
+    "image": "339.jpg",
+    "description": "Licuadora portátil de 350 ml tipo tomatodo con doble batería.",
+    "category": "Otros",
+    "inStock": 24
+  },
+  {
+    "id": 340,
+    "name": "Vaso Tea Princess blanco 500 ml",
+    "price": 75.0,
+    "image": "340.jpg",
+    "description": "Vaso de 500 ml en acero inoxidable 316, color blanco.",
+    "category": "Otros",
+    "inStock": 10
+  },
+  {
+    "id": 341,
+    "name": "Vaso Flower Language blanco 500 ml",
+    "price": 75.0,
+    "image": "341.jpg",
+    "description": "Vaso de 500 ml en acero inoxidable 316, color blanco.",
+    "category": "Otros",
+    "inStock": 10
+  },
+  {
+    "id": 342,
+    "name": "Vaso Flower Language negro 500 ml",
+    "price": 75.0,
+    "image": "342.jpg",
+    "description": "Vaso de 500 ml en acero inoxidable 316, color negro.",
+    "category": "Otros",
+    "inStock": 10
+  },
+  {
+    "id": 343,
+    "name": "Vaso flor de cerezo blanco 500 ml",
+    "price": 75.0,
+    "image": "343.jpg",
+    "description": "Vaso de 500 ml en acero inoxidable 316 con diseño flor de cerezo blanco.",
+    "category": "Otros",
+    "inStock": 10
+  },
+  {
+    "id": 344,
+    "name": "Vaso Tea Princess negro 500 ml",
+    "price": 75.0,
+    "image": "344.jpg",
+    "description": "Vaso de 500 ml en acero inoxidable 316, color negro.",
+    "category": "Otros",
+    "inStock": 10
+  }
+]
