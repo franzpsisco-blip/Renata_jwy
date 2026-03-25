@@ -25,18 +25,23 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "20.11.1"
+
+      - name: Setup npm
+        run: npm install -g npm@10.2.4
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
           static_site_generator: next
 
-      - name: Clean npm cache
-        run: npm cache clean --force
+      - name: Remove old lock and modules cache artifacts
+        run: |
+          rm -rf node_modules
+          rm -f package-lock.json
 
       - name: Install dependencies
-        run: npm install --no-audit --no-fund
+        run: npm install
 
       - name: Build with Next.js
         run: npm run build
