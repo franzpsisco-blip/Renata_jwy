@@ -1,8 +1,6 @@
-import type { NextConfig } from "next";
-
 const repo = "Renata_jwy";
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   output: "export",
   images: {
     unoptimized: true,
@@ -12,4 +10,4 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
 };
 
-export default nextConfig;
+module.exports = nextConfig;
