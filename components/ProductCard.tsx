@@ -19,10 +19,8 @@ function resolveImageSrc(image: string) {
   if (!image) return `${basePath}/products/placeholder.svg`;
   if (image.startsWith("http://") || image.startsWith("https://")) return image;
 
-  // Si ya viene como ruta completa desde public, por ejemplo /products/1.jpg
   if (image.startsWith("/")) return `${basePath}${image}`;
 
-  // Si solo viene como nombre de archivo, por ejemplo 1.jpg
   return `${basePath}/products/${image}`;
 }
 
