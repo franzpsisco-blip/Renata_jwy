@@ -1,37 +1,75 @@
 "use client";
 
-import React from "react";
-import { ProductGrid } from "./product-grid";
-import { fetchInventory } from "@/lib/inventory-client";
-import {
-  getDiscountCaption,
-  getDiscountPercentLabel,
-  isGlobalDiscountEnabled,
-} from "@/lib/discount";
+import { useEffect, useMemo, useState } from "react";
+import { ProductCard } from "@/components/ProductCard";
+import type { Product } from "@/lib/types";
 
 export default function CatalogPage() {
-  const [products, setProducts] = React.useState<any[]>([]);
-  const currencySymbol = process.env.NEXT_PUBLIC_CURRENCY_SYMBOL ?? "Bs";
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
-  React.useEffect(() => {
-    fetchInventory().then(setProducts);
-  }, []);
+  const basePath = process.env.NODE_ENV === "production" ? "/Renata_jwy" : "";
+
+  useEffect(() => {
+    async function loadProducts() {
+      try {
+        const res = await fetch(`${basePath}/data/inventory.json`, {
+          cache: "no-store",
+        });
+
+        if (!res.ok) {
+          throw new Error(`No se pudo cargar inventory.json (${res.status})`);
+        }
+
+        const data = await res.json();
+        setProducts(Array.isArray(data) ? data : []);
+      } catch (err) {
+        console.error("Error loading products:", err);
+        setError("No se pudieron cargar los productos.");
+        setProducts([]);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadProducts();
+  }, [basePath]);
+
+  const hasProducts = useMemo(() => products.length > 0, [products]);
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-10">
-      <div className="flex flex-col gap-2">
-        <h2 className="font-display text-3xl">Catálogo</h2>
-        <p className="text-sm text-black/70">
-          Joyería vintage aesthetic en Bolivia — piezas seleccionadas para brillar.
+      <div className="mb-8">
+        <h1 className="font-display text-3xl md:text-4xl">Catálogo</h1>
+        <p className="mt-2 text-sm text-black/65">
+          Elige tus piezas favoritas y añádelas al carrito.
         </p>
-        {isGlobalDiscountEnabled() ? (
-          <div className="mt-2 rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm shadow-soft">
-            <b>{getDiscountPercentLabel()}</b>{" "}
-            <span className="font-semibold text-black/70">{getDiscountCaption()}</span>
-          </div>
-        ) : null}
       </div>
-      <ProductGrid products={products} currencySymbol={currencySymbol} />
+
+      {loading ? (
+        <div className="rounded-3xl border border-black/10 bg-white p-8 text-center shadow-soft">
+          Cargando productos...
+        </div>
+      ) : error ? (
+        <div className="rounded-3xl border border-red-200 bg-red-50 p-8 text-center text-red-700 shadow-soft">
+          {error}
+        </div>
+      ) : !hasProducts ? (
+        <div className="rounded-3xl border border-black/10 bg-white p-8 text-center shadow-soft">
+          No hay productos disponibles.
+        </div>
+      ) : (
+        <section className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {products.map((product) => (
+            <ProductCard
+              key={product.id}
+              product={product}
+              currencySymbol="Bs"
+            />
+          ))}
+        </section>
+      )}
     </main>
   );
 }
