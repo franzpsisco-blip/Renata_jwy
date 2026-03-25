@@ -7,6 +7,8 @@ import {
 } from "@/lib/discount";
 
 export default function HomePage() {
+  const basePath = process.env.NODE_ENV === "production" ? "/Renata_jwy" : "";
+
   return (
     <main>
       <section className="relative overflow-hidden">
@@ -19,14 +21,12 @@ export default function HomePage() {
             </p>
 
             <h1 className="mt-3 font-display text-4xl leading-tight md:text-5xl">
-              Piezas vintage con <span className="italic text-rose">alma</span>,
-              listas para enamorar.
+              Piezas vintage con <span className="italic text-rose">alma</span>, listas para enamorar.
             </h1>
 
             <p className="mt-4 max-w-xl text-base text-black/70">
-              Anillos, collares, pulseras y accesorios elegidos para un brillo
-              clásico y elegante. Compra fácil, confirma por WhatsApp y recibe
-              tu pedido con cariño.
+              Anillos, collares, pulseras y accesorios elegidos para un brillo clásico y elegante.
+              Compra fácil, confirma por WhatsApp y recibe tu pedido con cariño.
             </p>
 
             {isGlobalDiscountEnabled() ? (
@@ -53,9 +53,7 @@ export default function HomePage() {
             <div className="mt-10 grid grid-cols-1 gap-3 text-sm text-black/70 md:grid-cols-3">
               <div className="rounded-3xl border border-black/10 bg-white p-4 shadow-soft">
                 <div className="font-medium text-ink">Entrega en Bolivia</div>
-                <div className="mt-1">
-                  A domicilio, presencial e interdepartamental
-                </div>
+                <div className="mt-1">A domicilio, presencial e interdepartamental</div>
               </div>
 
               <div className="rounded-3xl border border-black/10 bg-white p-4 shadow-soft">
@@ -73,7 +71,7 @@ export default function HomePage() {
           <div className="relative z-10">
             <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[2rem] border border-black/10 bg-white shadow-soft">
               <img
-                src="/hero.jpg"
+                src={`${basePath}/hero.jpg`}
                 alt="Renata Jewelry — estética vintage"
                 className="h-full w-full object-cover"
               />
