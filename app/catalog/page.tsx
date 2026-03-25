@@ -4,6 +4,17 @@ import { useEffect, useMemo, useState } from "react";
 import { ProductCard } from "@/components/ProductCard";
 import type { Product } from "@/lib/types";
 
+function shuffleArray<T>(array: T[]): T[] {
+  const copy = [...array];
+
+  for (let i = copy.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+
+  return copy;
+}
+
 export default function CatalogPage() {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
@@ -23,7 +34,13 @@ export default function CatalogPage() {
         }
 
         const data = await res.json();
-        setProducts(Array.isArray(data) ? data : []);
+
+        if (!Array.isArray(data)) {
+          throw new Error("El inventario no tiene formato de lista.");
+        }
+
+        const randomized = shuffleArray(data);
+        setProducts(randomized);
       } catch (err) {
         console.error("Error loading products:", err);
         setError("No se pudieron cargar los productos.");
