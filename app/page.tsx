@@ -52,10 +52,11 @@ export default function HomePage() {
             </div>
           </div>
 
+
           <div className="relative z-10">
             <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[2rem] border border-black/10 bg-white shadow-soft">
               <img
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/hero.jpg`}
+                src="/hero.jpg"
                 alt="Renata Jewelry — estética vintage"
                 className="h-full w-full object-cover"
               />
@@ -64,8 +65,7 @@ export default function HomePage() {
               Renata Jewelry — joyería vintage aesthetic en Bolivia.
             </p>
           </div>
-        </div>
-      </section>
+      
 
       <section className="mx-auto max-w-6xl px-4 pb-16">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
