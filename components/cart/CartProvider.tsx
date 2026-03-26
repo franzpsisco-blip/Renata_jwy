@@ -17,6 +17,7 @@ export type CartItem = ProductLike & {
 
 type CartContextValue = {
   items: CartItem[];
+  count: number;
   add: (product: ProductLike, quantity?: number) => void;
   remove: (id: string) => void;
   clear: () => void;
@@ -83,14 +84,19 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     } catch {}
   };
 
+  const count = useMemo(() => {
+    return items.reduce((acc, item) => acc + Number(item.quantity || 0), 0);
+  }, [items]);
+
   const value = useMemo(
     () => ({
       items,
+      count,
       add,
       remove,
       clear,
     }),
-    [items]
+    [items, count]
   );
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
