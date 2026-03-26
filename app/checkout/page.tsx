@@ -11,6 +11,36 @@ import {
   isGlobalDiscountEnabled,
 } from "@/lib/discount";
 
+function getItemPrice(item: any): number {
+  return Number(item?.price ?? item?.product?.price ?? item?.unitPrice ?? 0);
+}
+
+function getItemName(item: any): string {
+  return String(item?.name ?? item?.product?.name ?? "Producto");
+}
+
+function getItemCategory(item: any): string {
+  return String(item?.category ?? item?.product?.category ?? "");
+}
+
+function getItemImage(item: any, basePath: string): string {
+  const raw = item?.image ?? item?.product?.image ?? "";
+
+  if (!raw) return `${basePath}/products/placeholder.svg`;
+  if (typeof raw !== "string") return `${basePath}/products/placeholder.svg`;
+  if (raw.startsWith("http://") || raw.startsWith("https://")) return raw;
+  if (raw.startsWith("/")) return `${basePath}${raw}`;
+  return `${basePath}/products/${raw}`;
+}
+
+function getItemId(item: any): number | string {
+  return item?.id ?? item?.product?.id ?? "";
+}
+
+function getItemQty(item: any): number {
+  return Number(item?.quantity ?? 1);
+}
+
 export default function CheckoutPage() {
   const { items, remove, add, clear } = useCart();
 
@@ -18,14 +48,15 @@ export default function CheckoutPage() {
   const basePath = process.env.NODE_ENV === "production" ? "/Renata_jwy" : "";
 
   const subtotal = useMemo(() => {
-    return items.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    return items.reduce((acc, item) => {
+      return acc + getItemPrice(item) * getItemQty(item);
+    }, 0);
   }, [items]);
 
   const total = useMemo(() => {
-    return items.reduce(
-      (acc, item) => acc + getDiscountedPrice(item.price) * item.quantity,
-      0
-    );
+    return items.reduce((acc, item) => {
+      return acc + getDiscountedPrice(getItemPrice(item)) * getItemQty(item);
+    }, 0);
   }, [items]);
 
   const discountActive = isGlobalDiscountEnabled();
@@ -37,7 +68,7 @@ export default function CheckoutPage() {
       items,
       currencySymbol,
       total,
-    });
+    } as any);
 
     clear();
     window.location.href = whatsappUrl;
@@ -60,40 +91,40 @@ export default function CheckoutPage() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.5fr_0.9fr]">
           <section className="rounded-3xl border border-black/10 bg-white p-5 shadow-soft">
             <div className="space-y-4">
-              {items.map((item) => {
-                const discountedUnit = getDiscountedPrice(item.price);
-                const hasDiscount = discountActive && discountedUnit < item.price;
-
-                const imageSrc = item.image.startsWith("http")
-                  ? item.image
-                  : item.image.startsWith("/")
-                  ? `${basePath}${item.image}`
-                  : `${basePath}/products/${item.image}`;
+              {items.map((item: any, index: number) => {
+                const price = getItemPrice(item);
+                const quantity = getItemQty(item);
+                const name = getItemName(item);
+                const category = getItemCategory(item);
+                const imageSrc = getItemImage(item, basePath);
+                const discountedUnit = getDiscountedPrice(price);
+                const hasDiscount = discountActive && discountedUnit < price;
+                const itemId = getItemId(item);
 
                 return (
                   <div
-                    key={item.id}
+                    key={`${itemId}-${index}`}
                     className="flex flex-col gap-4 rounded-2xl border border-black/10 p-4 md:flex-row md:items-center"
                   >
                     <div className="h-24 w-24 shrink-0 overflow-hidden rounded-2xl bg-black/5">
                       <img
                         src={imageSrc}
-                        alt={item.name}
+                        alt={name}
                         className="h-full w-full object-cover"
                       />
                     </div>
 
                     <div className="min-w-0 flex-1">
-                      <div className="font-medium text-ink">{item.name}</div>
+                      <div className="font-medium text-ink">{name}</div>
 
-                      {item.category ? (
-                        <div className="mt-1 text-xs text-black/50">{item.category}</div>
+                      {category ? (
+                        <div className="mt-1 text-xs text-black/50">{category}</div>
                       ) : null}
 
                       {hasDiscount ? (
                         <div className="mt-2">
                           <div className="text-xs text-black/45 line-through">
-                            {formatMoney(item.price, currencySymbol)}
+                            {formatMoney(price, currencySymbol)}
                           </div>
                           <div className="text-sm font-semibold">
                             {formatMoney(discountedUnit, currencySymbol)}
@@ -104,20 +135,20 @@ export default function CheckoutPage() {
                         </div>
                       ) : (
                         <div className="mt-2 text-sm font-semibold">
-                          {formatMoney(item.price, currencySymbol)}
+                          {formatMoney(price, currencySymbol)}
                         </div>
                       )}
                     </div>
 
                     <div className="flex flex-wrap items-center gap-2">
                       <span className="min-w-8 text-center text-sm font-medium">
-                        {item.quantity}
+                        {quantity}
                       </span>
 
                       <Button
                         type="button"
                         variant="secondary"
-                        onClick={() => add(item, 1)}
+                        onClick={() => add(item as any, 1)}
                       >
                         +
                       </Button>
@@ -125,7 +156,7 @@ export default function CheckoutPage() {
                       <Button
                         type="button"
                         variant="secondary"
-                        onClick={() => remove(item.id)}
+                        onClick={() => remove(itemId)}
                       >
                         Quitar
                       </Button>
