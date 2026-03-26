@@ -1,162 +1,105 @@
 "use client";
 
-import React from "react";
-import type { CartItem, Product } from "@/lib/types";
-import { getDiscountedSubtotal } from "@/lib/discount";
+import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
 
-type CartState = {
-  items: CartItem[];
+type ProductLike = {
+  id: string | number;
+  name?: string;
+  price?: number;
+  image?: string;
+  category?: string;
+  [key: string]: any;
+};
+
+export type CartItem = ProductLike & {
+  quantity: number;
 };
 
 type CartContextValue = {
   items: CartItem[];
-  count: number;
-  subtotal: number;
-  add: (product: Product, qty?: number) => void;
-  remove: (productId: string) => void;
-  setQty: (productId: string, qty: number) => void;
+  add: (product: ProductLike, quantity?: number) => void;
+  remove: (id: string) => void;
   clear: () => void;
 };
 
-const CartContext = React.createContext<CartContextValue | null>(null);
+const CartContext = createContext<CartContextValue | undefined>(undefined);
 
-const STORAGE_KEY = "renata_cart_v2";
-const LEGACY_STORAGE_KEYS = ["renata_cart_v1", "renata_cart_v0", "renata_cart"];
+const STORAGE_KEY = "renata-cart-v4";
 
-function calcSubtotal(items: CartItem[]) {
-  return getDiscountedSubtotal(items);
-}
-
-function sanitizeItems(input: unknown): CartItem[] {
-  if (!Array.isArray(input)) return [];
-
-  return input
-    .filter((item): item is CartItem => {
-      return Boolean(
-        item &&
-          typeof item === "object" &&
-          "product" in item &&
-          item.product &&
-          typeof item.product === "object" &&
-          typeof item.product.id === "string" &&
-          typeof item.product.name === "string" &&
-          typeof item.product.price === "number" &&
-          typeof item.qty === "number"
-      );
-    })
-    .map((item) => ({
-      product: item.product,
-      qty: Math.max(1, Math.min(99, Math.floor(item.qty))),
-    }));
-}
-
-function clearLegacyCartStorage() {
-  if (typeof window === "undefined") return;
-
-  for (const key of LEGACY_STORAGE_KEYS) {
-    window.localStorage.removeItem(key);
-    window.sessionStorage.removeItem(key);
-  }
-}
-
-function readCartFromSession(): CartState {
-  if (typeof window === "undefined") return { items: [] };
-
-  try {
-    const raw = window.sessionStorage.getItem(STORAGE_KEY);
-    if (!raw) return { items: [] };
-    const parsed = JSON.parse(raw) as CartState;
-    return { items: sanitizeItems(parsed?.items) };
-  } catch {
-    return { items: [] };
-  }
+function normalizeId(id: string | number | undefined | null) {
+  return String(id ?? "");
 }
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
-  const [state, setState] = React.useState<CartState>({ items: [] });
-  const [hydrated, setHydrated] = React.useState(false);
+  const [items, setItems] = useState<CartItem[]>([]);
 
-  React.useEffect(() => {
-    clearLegacyCartStorage();
-    setState(readCartFromSession());
-    setHydrated(true);
+  useEffect(() => {
+    try {
+      const raw = window.localStorage.getItem(STORAGE_KEY);
+      if (!raw) return;
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) {
+        setItems(parsed);
+      }
+    } catch {
+      setItems([]);
+    }
   }, []);
 
-  React.useEffect(() => {
-    if (!hydrated || typeof window === "undefined") return;
-
+  useEffect(() => {
     try {
-      if (state.items.length === 0) {
-        window.sessionStorage.removeItem(STORAGE_KEY);
-        return;
-      }
-
-      window.sessionStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
     } catch {}
-  }, [state, hydrated]);
+  }, [items]);
 
-  const api: CartContextValue = React.useMemo(() => {
-    const count = state.items.reduce((c, it) => c + it.qty, 0);
-    const subtotal = calcSubtotal(state.items);
+  const add = (product: ProductLike, quantity = 1) => {
+    const productId = normalizeId(product.id);
 
-    function add(product: Product, qty = 1) {
-      const safeQty = Math.max(1, Math.min(99, Math.floor(qty)));
+    setItems((prev) => {
+      const index = prev.findIndex((item) => normalizeId(item.id) === productId);
 
-      setState((s) => {
-        const existing = s.items.find((x) => x.product.id === product.id);
-        if (existing) {
-          return {
-            items: s.items.map((x) =>
-              x.product.id === product.id
-                ? { ...x, qty: Math.min(99, x.qty + safeQty) }
-                : x
-            ),
-          };
-        }
-        return { items: [...s.items, { product, qty: safeQty }] };
-      });
-    }
-
-    function remove(productId: string) {
-      setState((s) => ({ items: s.items.filter((x) => x.product.id !== productId) }));
-    }
-
-    function setQty(productId: string, qty: number) {
-      const safe = Math.floor(qty);
-
-      if (safe <= 0) {
-        remove(productId);
-        return;
+      if (index === -1) {
+        return [...prev, { ...product, quantity }];
       }
 
-      setState((s) => ({
-        items: s.items.map((x) =>
-          x.product.id === productId
-            ? { ...x, qty: Math.max(1, Math.min(99, safe)) }
-            : x
-        ),
-      }));
-    }
+      const next = [...prev];
+      next[index] = {
+        ...next[index],
+        quantity: Number(next[index].quantity || 0) + quantity,
+      };
+      return next;
+    });
+  };
 
-    function clear() {
-      setState({ items: [] });
+  const remove = (id: string) => {
+    const targetId = normalizeId(id);
+    setItems((prev) => prev.filter((item) => normalizeId(item.id) !== targetId));
+  };
 
-      if (typeof window !== "undefined") {
-        try {
-          window.sessionStorage.removeItem(STORAGE_KEY);
-          clearLegacyCartStorage();
-        } catch {}
-      }
-    }
+  const clear = () => {
+    setItems([]);
+    try {
+      window.localStorage.removeItem(STORAGE_KEY);
+    } catch {}
+  };
 
-    return { items: state.items, count, subtotal, add, remove, setQty, clear };
-  }, [state.items]);
+  const value = useMemo(
+    () => ({
+      items,
+      add,
+      remove,
+      clear,
+    }),
+    [items]
+  );
 
-  return <CartContext.Provider value={api}>{children}</CartContext.Provider>;
+  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }
 
 export function useCart() {
-  const ctx = React.useContext(CartContext);
-  if (!ctx) throw new Error("useCart must be used within CartProvider");
+  const ctx = useContext(CartContext);
+  if (!ctx) {
+    throw new Error("useCart must be used within a CartProvider");
+  }
   return ctx;
 }
