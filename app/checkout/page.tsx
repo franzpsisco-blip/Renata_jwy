@@ -4,7 +4,7 @@ import { useMemo } from "react";
 import { useCart } from "@/components/cart/CartProvider";
 import { Button } from "@/components/ui/Button";
 import { formatMoney } from "@/lib/money";
-import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import { buildWhatsAppLink } from "@/lib/whatsapp";
 import {
   getDiscountCaption,
   getDiscountedPrice,
@@ -12,15 +12,10 @@ import {
 } from "@/lib/discount";
 
 export default function CheckoutPage() {
-  const {
-    items,
-    remove,
-    increment,
-    decrement,
-    clear,
-  } = useCart();
+  const { items, remove, increment, decrement, clear } = useCart();
 
   const currencySymbol = "Bs";
+  const basePath = process.env.NODE_ENV === "production" ? "/Renata_jwy" : "";
 
   const subtotal = useMemo(() => {
     return items.reduce((acc, item) => acc + item.price * item.quantity, 0);
@@ -38,7 +33,7 @@ export default function CheckoutPage() {
   const handleSendToWhatsApp = () => {
     if (!items.length) return;
 
-    const whatsappUrl = buildWhatsAppUrl({
+    const whatsappUrl = buildWhatsAppLink({
       items,
       currencySymbol,
       total,
@@ -69,6 +64,12 @@ export default function CheckoutPage() {
                 const discountedUnit = getDiscountedPrice(item.price);
                 const hasDiscount = discountActive && discountedUnit < item.price;
 
+                const imageSrc = item.image.startsWith("http")
+                  ? item.image
+                  : item.image.startsWith("/")
+                  ? `${basePath}${item.image}`
+                  : `${basePath}/products/${item.image}`;
+
                 return (
                   <div
                     key={item.id}
@@ -76,7 +77,7 @@ export default function CheckoutPage() {
                   >
                     <div className="h-24 w-24 shrink-0 overflow-hidden rounded-2xl bg-black/5">
                       <img
-                        src={item.image}
+                        src={imageSrc}
                         alt={item.name}
                         className="h-full w-full object-cover"
                       />
@@ -165,16 +166,14 @@ export default function CheckoutPage() {
                     {formatMoney(total, currencySymbol)}
                   </span>
                 </div>
-              ) : null}
-
-              {!discountActive ? (
+              ) : (
                 <div className="flex items-center justify-between">
                   <span className="text-black/65">Total</span>
                   <span className="font-semibold">
                     {formatMoney(total, currencySymbol)}
                   </span>
                 </div>
-              ) : null}
+              )}
             </div>
 
             <div className="mt-6">
