@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useCart } from "@/components/cart/CartProvider";
 import { Button } from "@/components/ui/Button";
 import { formatMoney } from "@/lib/money";
@@ -40,7 +40,15 @@ function getItemQty(item: any): number {
   return Number(item?.quantity ?? 1);
 }
 
-function buildDirectWhatsAppLink(items: any[], total: number, currencySymbol: string) {
+function buildDirectWhatsAppLink(
+  items: any[],
+  total: number,
+  currencySymbol: string,
+  customerName: string,
+  deliveryAddress: string,
+  phoneNumber: string,
+  notes: string
+) {
   const phone =
     process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, "") || "59176498138";
 
@@ -61,7 +69,13 @@ function buildDirectWhatsAppLink(items: any[], total: number, currencySymbol: st
     "",
     `Total: ${formatMoney(total, currencySymbol)}`,
     "",
-    "💖 Gracias",
+    "📌 Datos del cliente",
+    `Nombre: ${customerName}`,
+    `¿Dónde te lo envío?: ${deliveryAddress}`,
+    `Teléfono: ${phoneNumber || "No indicado"}`,
+    `Nota o referencia: ${notes || "Ninguna"}`,
+    "",
+    "💖 Espero su confirmación, gracias.",
   ].join("\n");
 
   return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
@@ -73,24 +87,47 @@ export default function CheckoutPage() {
   const currencySymbol = "Bs";
   const basePath = process.env.NODE_ENV === "production" ? "/Renata_jwy" : "";
 
+  const [customerName, setCustomerName] = useState("");
+  const [deliveryAddress, setDeliveryAddress] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [notes, setNotes] = useState("");
+  const [showErrors, setShowErrors] = useState(false);
+
   const subtotal = useMemo(() => {
-    return items.reduce((acc, item) => {
+    return items.reduce((acc: number, item: any) => {
       return acc + getItemPrice(item) * getItemQty(item);
     }, 0);
   }, [items]);
 
   const total = useMemo(() => {
-    return items.reduce((acc, item) => {
+    return items.reduce((acc: number, item: any) => {
       return acc + getDiscountedPrice(getItemPrice(item)) * getItemQty(item);
     }, 0);
   }, [items]);
 
   const discountActive = isGlobalDiscountEnabled();
 
+  const nameError = showErrors && !customerName.trim();
+  const addressError = showErrors && !deliveryAddress.trim();
+
   const handleSendToWhatsApp = () => {
     if (!items.length) return;
 
-    const whatsappUrl = buildDirectWhatsAppLink(items, total, currencySymbol);
+    if (!customerName.trim() || !deliveryAddress.trim()) {
+      setShowErrors(true);
+      return;
+    }
+
+    const whatsappUrl = buildDirectWhatsAppLink(
+      items,
+      total,
+      currencySymbol,
+      customerName.trim(),
+      deliveryAddress.trim(),
+      phoneNumber.trim(),
+      notes.trim()
+    );
+
     clear();
     window.location.href = whatsappUrl;
   };
@@ -100,7 +137,7 @@ export default function CheckoutPage() {
       <div className="mb-8">
         <h1 className="font-display text-3xl md:text-4xl">Finalizar pedido</h1>
         <p className="mt-2 text-sm text-black/65">
-          Revisa tu carrito y envía tu pedido directo por WhatsApp.
+          Revisa tu carrito, completa tus datos y envía tu pedido directo por WhatsApp.
         </p>
       </div>
 
@@ -195,9 +232,79 @@ export default function CheckoutPage() {
           </section>
 
           <aside className="rounded-3xl border border-black/10 bg-white p-5 shadow-soft">
-            <h2 className="font-display text-2xl">Resumen</h2>
+            <h2 className="font-display text-2xl">Resumen del pedido</h2>
 
-            <div className="mt-5 space-y-3 text-sm">
+            <div className="mt-5 space-y-5">
+              <div>
+                <label className="mb-1 block text-sm font-medium text-black/75">
+                  Nombre
+                </label>
+                <input
+                  type="text"
+                  value={customerName}
+                  onChange={(e) => setCustomerName(e.target.value)}
+                  placeholder="Escribe tu nombre"
+                  className={`w-full rounded-2xl border px-4 py-3 text-sm outline-none transition ${
+                    nameError
+                      ? "border-red-400 bg-red-50"
+                      : "border-black/10 bg-white focus:border-black/25"
+                  }`}
+                />
+                {nameError ? (
+                  <p className="mt-1 text-xs text-red-600">Por favor escribe tu nombre.</p>
+                ) : null}
+              </div>
+
+              <div>
+                <label className="mb-1 block text-sm font-medium text-black/75">
+                  ¿Dónde te lo envío?
+                </label>
+                <textarea
+                  value={deliveryAddress}
+                  onChange={(e) => setDeliveryAddress(e.target.value)}
+                  placeholder="Ejemplo: Zona Norte, Cochabamba / calle / referencia"
+                  rows={3}
+                  className={`w-full rounded-2xl border px-4 py-3 text-sm outline-none transition ${
+                    addressError
+                      ? "border-red-400 bg-red-50"
+                      : "border-black/10 bg-white focus:border-black/25"
+                  }`}
+                />
+                {addressError ? (
+                  <p className="mt-1 text-xs text-red-600">
+                    Por favor escribe la dirección o referencia.
+                  </p>
+                ) : null}
+              </div>
+
+              <div>
+                <label className="mb-1 block text-sm font-medium text-black/75">
+                  Teléfono de contacto
+                </label>
+                <input
+                  type="text"
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  placeholder="Tu número de contacto"
+                  className="w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm outline-none transition focus:border-black/25"
+                />
+              </div>
+
+              <div>
+                <label className="mb-1 block text-sm font-medium text-black/75">
+                  Nota o referencia adicional
+                </label>
+                <textarea
+                  value={notes}
+                  onChange={(e) => setNotes(e.target.value)}
+                  placeholder="Color, talla, horario, referencia, etc."
+                  rows={3}
+                  className="w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm outline-none transition focus:border-black/25"
+                />
+              </div>
+            </div>
+
+            <div className="mt-6 space-y-3 text-sm">
               <div className="flex items-center justify-between">
                 <span className="text-black/65">Subtotal</span>
                 <span>{formatMoney(subtotal, currencySymbol)}</span>
@@ -227,7 +334,7 @@ export default function CheckoutPage() {
             </div>
 
             <p className="mt-3 text-xs text-black/50">
-              Al hacer clic, se abrirá WhatsApp directamente con tu pedido.
+              Completa tus datos y toca el botón para abrir WhatsApp con tu pedido listo.
             </p>
           </aside>
         </div>
