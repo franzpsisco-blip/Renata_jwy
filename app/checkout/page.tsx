@@ -12,7 +12,7 @@ import {
 } from "@/lib/discount";
 
 export default function CheckoutPage() {
-  const { items, remove, increment, decrement, clear } = useCart();
+  const { items, remove, add, clear } = useCart();
 
   const currencySymbol = "Bs";
   const basePath = process.env.NODE_ENV === "production" ? "/Renata_jwy" : "";
@@ -110,14 +110,6 @@ export default function CheckoutPage() {
                     </div>
 
                     <div className="flex flex-wrap items-center gap-2">
-                      <Button
-                        type="button"
-                        variant="secondary"
-                        onClick={() => decrement(item.id)}
-                      >
-                        -
-                      </Button>
-
                       <span className="min-w-8 text-center text-sm font-medium">
                         {item.quantity}
                       </span>
@@ -125,7 +117,7 @@ export default function CheckoutPage() {
                       <Button
                         type="button"
                         variant="secondary"
-                        onClick={() => increment(item.id)}
+                        onClick={() => add(item, 1)}
                       >
                         +
                       </Button>
