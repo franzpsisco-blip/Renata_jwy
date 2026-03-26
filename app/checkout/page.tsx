@@ -4,7 +4,6 @@ import { useMemo } from "react";
 import { useCart } from "@/components/cart/CartProvider";
 import { Button } from "@/components/ui/Button";
 import { formatMoney } from "@/lib/money";
-import { buildWhatsAppLink } from "@/lib/whatsapp";
 import {
   getDiscountCaption,
   getDiscountedPrice,
@@ -41,6 +40,33 @@ function getItemQty(item: any): number {
   return Number(item?.quantity ?? 1);
 }
 
+function buildDirectWhatsAppLink(items: any[], total: number, currencySymbol: string) {
+  const phone =
+    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, "") || "59176498138";
+
+  const lines = items.map((item: any) => {
+    const name = getItemName(item);
+    const qty = getItemQty(item);
+    const price = getItemPrice(item);
+    const unit = getDiscountedPrice(price);
+    const subtotal = unit * qty;
+
+    return `• ${name} x${qty} — ${formatMoney(subtotal, currencySymbol)}`;
+  });
+
+  const message = [
+    "✨ Hola, quiero hacer este pedido:",
+    "",
+    ...lines,
+    "",
+    `Total: ${formatMoney(total, currencySymbol)}`,
+    "",
+    "💖 Gracias",
+  ].join("\n");
+
+  return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+}
+
 export default function CheckoutPage() {
   const { items, remove, add, clear } = useCart();
 
@@ -64,12 +90,7 @@ export default function CheckoutPage() {
   const handleSendToWhatsApp = () => {
     if (!items.length) return;
 
-    const whatsappUrl = buildWhatsAppLink({
-      items,
-      currencySymbol,
-      total,
-    } as any);
-
+    const whatsappUrl = buildDirectWhatsAppLink(items, total, currencySymbol);
     clear();
     window.location.href = whatsappUrl;
   };
