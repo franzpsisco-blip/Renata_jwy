@@ -1,428 +1,194 @@
 "use client";
 
-import Link from "next/link";
-import { useMemo, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useMemo } from "react";
 import { useCart } from "@/components/cart/CartProvider";
-import { OrderDraftSchema, createOrderId, PICKUP_INFO } from "@/lib/order";
-import { buildWhatsAppLink } from "@/lib/whatsapp";
-import { getDiscountedPrice } from "@/lib/discount";
-
-type DeliveryMethod = "PICKUP" | "DELIVERY" | "INTERDEPT";
-type PaymentMethod = "PAY_ON_SITE" | "PAY_QR";
-type Department =
-  | "Beni"
-  | "Chuquisaca"
-  | "Cochabamba"
-  | "La Paz"
-  | "Oruro"
-  | "Pando"
-  | "Potosí"
-  | "Santa Cruz"
-  | "Tarija";
-
-function formatBs(value: number) {
-  return `Bs ${value.toFixed(2).replace(".", ",")}`;
-}
+import { Button } from "@/components/ui/Button";
+import { formatMoney } from "@/lib/money";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import {
+  getDiscountCaption,
+  getDiscountedPrice,
+  isGlobalDiscountEnabled,
+} from "@/lib/discount";
 
 export default function CheckoutPage() {
-  const router = useRouter();
-  const { items, clear, remove, setQty } = useCart();
+  const {
+    items,
+    remove,
+    increment,
+    decrement,
+    clear,
+  } = useCart();
 
-  const [customerName, setCustomerName] = useState("");
-  const [customerPhone, setCustomerPhone] = useState("");
-  const [deliveryMethod, setDeliveryMethod] = useState<DeliveryMethod>("PICKUP");
-  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("PAY_ON_SITE");
-  const [address, setAddress] = useState("");
-  const [deliveryDate, setDeliveryDate] = useState("");
-  const [deliveryTime, setDeliveryTime] = useState("");
-  const [interdeptDepartment, setInterdeptDepartment] = useState<Department | "">("");
-  const [notes, setNotes] = useState("");
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
+  const currencySymbol = "Bs";
 
   const subtotal = useMemo(() => {
-    return items.reduce((acc, it) => {
-      return acc + getDiscountedPrice(Number(it.product.price || 0)) * Number(it.qty || 0);
-    }, 0);
+    return items.reduce((acc, item) => acc + item.price * item.quantity, 0);
   }, [items]);
 
-  function handleDecrease(productId: string, currentQty: number) {
-    setQty(productId, currentQty - 1);
-  }
+  const total = useMemo(() => {
+    return items.reduce(
+      (acc, item) => acc + getDiscountedPrice(item.price) * item.quantity,
+      0
+    );
+  }, [items]);
 
-  function handleIncrease(productId: string, currentQty: number) {
-    setQty(productId, currentQty + 1);
-  }
+  const discountActive = isGlobalDiscountEnabled();
 
-  function handleClearCart() {
+  const handleSendToWhatsApp = () => {
+    if (!items.length) return;
+
+    const whatsappUrl = buildWhatsAppUrl({
+      items,
+      currencySymbol,
+      total,
+    });
+
     clear();
-    setError(null);
-  }
-
-  async function placeOrder() {
-    setError(null);
-
-    const payload = {
-      items: items.map((it) => ({
-        id: it.product.id,
-        name: it.product.name,
-        unitPrice: getDiscountedPrice(Number(it.product.price || 0)),
-        qty: Number(it.qty || 1),
-      })),
-      subtotal,
-      deliveryMethod: deliveryMethod || undefined,
-      address: address.trim() || undefined,
-      deliveryDate: deliveryDate.trim() || undefined,
-      deliveryTime: deliveryTime.trim() || undefined,
-      interdeptDepartment: interdeptDepartment || undefined,
-      paymentMethod: paymentMethod || undefined,
-      customerName: customerName.trim(),
-      customerPhone: customerPhone.trim(),
-      notes: notes.trim() || undefined,
-    };
-
-    const parsed = OrderDraftSchema.safeParse(payload);
-
-    if (!parsed.success) {
-      const firstIssue = parsed.error.issues[0]?.message;
-      setError(firstIssue || "Solo nombre y teléfono son obligatorios.");
-      return;
-    }
-
-    setLoading(true);
-
-    try {
-      const orderId = createOrderId();
-      const waCustomer = buildWhatsAppLink(orderId, parsed.data);
-
-      clear();
-
-      router.push(
-        `/success?orderId=${encodeURIComponent(orderId)}&pay=${encodeURIComponent(
-          parsed.data.paymentMethod || ""
-        )}&wa=${encodeURIComponent(waCustomer)}`
-      );
-    } catch (e: any) {
-      setError(e?.message ?? "Error desconocido");
-    } finally {
-      setLoading(false);
-    }
-  }
+    window.location.href = whatsappUrl;
+  };
 
   return (
-    <main className="mx-auto max-w-3xl px-4 py-8">
-      <div className="mb-8 flex items-center justify-between gap-4">
-        <h1 className="text-3xl font-semibold tracking-tight">Finalizar pedido</h1>
-
-        {items.length > 0 ? (
-          <button
-            type="button"
-            onClick={handleClearCart}
-            className="rounded-full border border-neutral-300 bg-white px-5 py-3 text-sm font-medium text-black transition hover:bg-black hover:text-white"
-          >
-            Vaciar carrito
-          </button>
-        ) : null}
+    <main className="mx-auto max-w-6xl px-4 py-10">
+      <div className="mb-8">
+        <h1 className="font-display text-3xl md:text-4xl">Finalizar pedido</h1>
+        <p className="mt-2 text-sm text-black/65">
+          Revisa tu carrito y envía tu pedido directo por WhatsApp.
+        </p>
       </div>
 
-      <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
-        <section className="rounded-[28px] border border-neutral-300 bg-[#f4efe7] p-6">
-          <div className="space-y-6">
-            <div>
-              <label className="mb-2 block text-sm font-medium">Nombre *</label>
-              <input
-                className="w-full rounded-[22px] border border-neutral-300 bg-white px-5 py-4 text-lg outline-none"
-                value={customerName}
-                onChange={(e) => setCustomerName(e.target.value)}
-                placeholder="Tu nombre"
-              />
-            </div>
-
-            <div>
-              <label className="mb-2 block text-sm font-medium">Teléfono *</label>
-              <input
-                className="w-full rounded-[22px] border border-neutral-300 bg-white px-5 py-4 text-lg outline-none"
-                value={customerPhone}
-                onChange={(e) => setCustomerPhone(e.target.value)}
-                placeholder="Tu teléfono"
-              />
-            </div>
-
-            <div>
-              <p className="mb-3 text-sm font-medium">Tipo de entrega</p>
-              <div className="space-y-3">
-                <button
-                  type="button"
-                  onClick={() => setDeliveryMethod("PICKUP")}
-                  className={`w-full rounded-full px-5 py-4 text-lg transition ${
-                    deliveryMethod === "PICKUP"
-                      ? "bg-black text-white"
-                      : "border border-neutral-300 bg-white text-black"
-                  }`}
-                >
-                  Entrega presencial
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => setDeliveryMethod("DELIVERY")}
-                  className={`w-full rounded-full px-5 py-4 text-lg transition ${
-                    deliveryMethod === "DELIVERY"
-                      ? "bg-black text-white"
-                      : "border border-neutral-300 bg-white text-black"
-                  }`}
-                >
-                  A domicilio (misma ciudad)
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => setDeliveryMethod("INTERDEPT")}
-                  className={`w-full rounded-full px-5 py-4 text-lg transition ${
-                    deliveryMethod === "INTERDEPT"
-                      ? "bg-black text-white"
-                      : "border border-neutral-300 bg-white text-black"
-                  }`}
-                >
-                  Entregas interdepartamentales
-                </button>
-              </div>
-            </div>
-
-            {deliveryMethod === "PICKUP" && (
-              <div className="rounded-[28px] border border-[#ddd3c6] bg-[#efe9df] p-6">
-                <h3 className="mb-3 text-2xl font-semibold">Horario y lugar</h3>
-                <p className="text-xl font-semibold">{PICKUP_INFO.schedule}</p>
-                <p className="mt-1 text-xl text-neutral-700">{PICKUP_INFO.location}</p>
-              </div>
-            )}
-
-            {deliveryMethod === "DELIVERY" && (
-              <div className="space-y-4 rounded-[28px] border border-neutral-300 bg-[#efe9df] p-5">
-                <div>
-                  <label className="mb-2 block text-sm font-medium">Dirección</label>
-                  <input
-                    className="w-full rounded-[18px] border border-neutral-300 bg-white px-4 py-3 outline-none"
-                    value={address}
-                    onChange={(e) => setAddress(e.target.value)}
-                    placeholder="Opcional"
-                  />
-                </div>
-
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-sm font-medium">Fecha</label>
-                    <input
-                      type="date"
-                      className="w-full rounded-[18px] border border-neutral-300 bg-white px-4 py-3 outline-none"
-                      value={deliveryDate}
-                      onChange={(e) => setDeliveryDate(e.target.value)}
-                    />
-                  </div>
-
-                  <div>
-                    <label className="mb-2 block text-sm font-medium">Hora</label>
-                    <input
-                      type="time"
-                      className="w-full rounded-[18px] border border-neutral-300 bg-white px-4 py-3 outline-none"
-                      value={deliveryTime}
-                      onChange={(e) => setDeliveryTime(e.target.value)}
-                    />
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {deliveryMethod === "INTERDEPT" && (
-              <div className="space-y-4 rounded-[28px] border border-neutral-300 bg-[#efe9df] p-5">
-                <div>
-                  <label className="mb-2 block text-sm font-medium">Departamento</label>
-                  <select
-                    className="w-full rounded-[18px] border border-neutral-300 bg-white px-4 py-3 outline-none"
-                    value={interdeptDepartment}
-                    onChange={(e) => setInterdeptDepartment(e.target.value as Department | "")}
-                  >
-                    <option value="">Seleccionar</option>
-                    <option value="Beni">Beni</option>
-                    <option value="Chuquisaca">Chuquisaca</option>
-                    <option value="Cochabamba">Cochabamba</option>
-                    <option value="La Paz">La Paz</option>
-                    <option value="Oruro">Oruro</option>
-                    <option value="Pando">Pando</option>
-                    <option value="Potosí">Potosí</option>
-                    <option value="Santa Cruz">Santa Cruz</option>
-                    <option value="Tarija">Tarija</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-sm font-medium">Dirección</label>
-                  <input
-                    className="w-full rounded-[18px] border border-neutral-300 bg-white px-4 py-3 outline-none"
-                    value={address}
-                    onChange={(e) => setAddress(e.target.value)}
-                    placeholder="Opcional"
-                  />
-                </div>
-              </div>
-            )}
-
-            <div>
-              <p className="mb-3 text-sm font-medium">Pago</p>
-              <div className="grid grid-cols-2 gap-3">
-                <button
-                  type="button"
-                  onClick={() => setPaymentMethod("PAY_QR")}
-                  className={`rounded-full px-5 py-4 text-lg transition ${
-                    paymentMethod === "PAY_QR"
-                      ? "bg-black text-white"
-                      : "border border-neutral-300 bg-white text-black"
-                  }`}
-                >
-                  QR
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => setPaymentMethod("PAY_ON_SITE")}
-                  className={`rounded-full px-5 py-4 text-lg transition ${
-                    paymentMethod === "PAY_ON_SITE"
-                      ? "bg-black text-white"
-                      : "border border-neutral-300 bg-white text-black"
-                  }`}
-                >
-                  En el sitio
-                </button>
-              </div>
-
-              {paymentMethod === "PAY_ON_SITE" && (
-                <p className="mt-3 text-base text-neutral-600">
-                  Pagas al momento de la entrega/encuentro.
-                </p>
-              )}
-
-              {paymentMethod === "PAY_QR" && (
-                <p className="mt-3 text-base text-neutral-600">
-                  Te enviaremos el QR al confirmar el pedido.
-                </p>
-              )}
-            </div>
-
-            <div>
-              <label className="mb-2 block text-sm font-medium">Notas</label>
-              <textarea
-                className="min-h-[160px] w-full rounded-[22px] border border-neutral-300 bg-white px-5 py-4 outline-none"
-                value={notes}
-                onChange={(e) => setNotes(e.target.value)}
-                placeholder="Opcional"
-              />
-            </div>
-
-            {error && (
-              <div className="rounded-[24px] border border-red-200 bg-red-50 px-5 py-4 text-red-600">
-                {error}
-              </div>
-            )}
-
-            <button
-              type="button"
-              onClick={placeOrder}
-              disabled={loading}
-              className="w-full rounded-full bg-black px-6 py-5 text-2xl font-semibold text-white disabled:opacity-60"
-            >
-              {loading ? "Creando pedido..." : "Crear pedido"}
-            </button>
-          </div>
-        </section>
-
-        <aside className="rounded-[28px] border border-neutral-300 bg-[#f4efe7] p-6">
-          <div className="mb-5 flex items-center justify-between gap-3">
-            <h2 className="text-2xl font-semibold">Resumen</h2>
-            {items.length > 0 ? (
-              <button
-                type="button"
-                onClick={handleClearCart}
-                className="text-sm font-medium text-black/70 underline-offset-4 hover:underline"
-              >
-                Vaciar
-              </button>
-            ) : null}
-          </div>
-
-          <div className="space-y-4">
-            {items.length === 0 ? (
-              <div className="space-y-3">
-                <p className="text-neutral-600">No hay productos en el carrito.</p>
-                <Link
-                  href="/catalog"
-                  className="inline-flex rounded-full border border-neutral-300 bg-white px-5 py-3 text-sm font-medium text-black transition hover:bg-black hover:text-white"
-                >
-                  Volver al catálogo
-                </Link>
-              </div>
-            ) : (
-              items.map((item) => {
-                const unit = getDiscountedPrice(item.product.price);
-                const total = unit * item.qty;
+      {!items.length ? (
+        <div className="rounded-3xl border border-black/10 bg-white p-8 text-center shadow-soft">
+          <p className="text-base text-black/70">Tu carrito está vacío.</p>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.5fr_0.9fr]">
+          <section className="rounded-3xl border border-black/10 bg-white p-5 shadow-soft">
+            <div className="space-y-4">
+              {items.map((item) => {
+                const discountedUnit = getDiscountedPrice(item.price);
+                const hasDiscount = discountActive && discountedUnit < item.price;
 
                 return (
                   <div
-                    key={item.product.id}
-                    className="rounded-2xl border border-neutral-300 bg-white p-4"
+                    key={item.id}
+                    className="flex flex-col gap-4 rounded-2xl border border-black/10 p-4 md:flex-row md:items-center"
                   >
-                    <div className="flex items-start justify-between gap-3">
-                      <div>
-                        <p className="font-medium">{item.product.name}</p>
-                        <p className="mt-1 text-sm text-neutral-600">{formatBs(unit)} c/u</p>
-                      </div>
-
-                      <button
-                        type="button"
-                        onClick={() => remove(item.product.id)}
-                        className="text-sm font-medium text-black/60 transition hover:text-black"
-                      >
-                        Quitar
-                      </button>
+                    <div className="h-24 w-24 shrink-0 overflow-hidden rounded-2xl bg-black/5">
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="h-full w-full object-cover"
+                      />
                     </div>
 
-                    <div className="mt-4 flex items-center justify-between gap-3">
-                      <div className="inline-flex items-center rounded-full border border-neutral-300 bg-[#f8f3ec]">
-                        <button
-                          type="button"
-                          onClick={() => handleDecrease(item.product.id, item.qty)}
-                          className="px-4 py-2 text-lg leading-none"
-                          aria-label={`Disminuir cantidad de ${item.product.name}`}
-                        >
-                          −
-                        </button>
-                        <span className="min-w-10 text-center text-base font-medium">{item.qty}</span>
-                        <button
-                          type="button"
-                          onClick={() => handleIncrease(item.product.id, item.qty)}
-                          className="px-4 py-2 text-lg leading-none"
-                          aria-label={`Aumentar cantidad de ${item.product.name}`}
-                        >
-                          +
-                        </button>
-                      </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="font-medium text-ink">{item.name}</div>
 
-                      <p className="font-semibold">{formatBs(total)}</p>
+                      {item.category ? (
+                        <div className="mt-1 text-xs text-black/50">{item.category}</div>
+                      ) : null}
+
+                      {hasDiscount ? (
+                        <div className="mt-2">
+                          <div className="text-xs text-black/45 line-through">
+                            {formatMoney(item.price, currencySymbol)}
+                          </div>
+                          <div className="text-sm font-semibold">
+                            {formatMoney(discountedUnit, currencySymbol)}
+                          </div>
+                          <div className="text-[11px] text-black/60">
+                            {getDiscountCaption()}
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="mt-2 text-sm font-semibold">
+                          {formatMoney(item.price, currencySymbol)}
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="flex flex-wrap items-center gap-2">
+                      <Button
+                        type="button"
+                        variant="secondary"
+                        onClick={() => decrement(item.id)}
+                      >
+                        -
+                      </Button>
+
+                      <span className="min-w-8 text-center text-sm font-medium">
+                        {item.quantity}
+                      </span>
+
+                      <Button
+                        type="button"
+                        variant="secondary"
+                        onClick={() => increment(item.id)}
+                      >
+                        +
+                      </Button>
+
+                      <Button
+                        type="button"
+                        variant="secondary"
+                        onClick={() => remove(item.id)}
+                      >
+                        Quitar
+                      </Button>
                     </div>
                   </div>
                 );
-              })
-            )}
-          </div>
-
-          <div className="mt-6 border-t border-neutral-300 pt-4">
-            <div className="flex items-center justify-between text-lg">
-              <span>Subtotal</span>
-              <span className="font-semibold">{formatBs(subtotal)}</span>
+              })}
             </div>
-          </div>
-        </aside>
-      </div>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Button type="button" variant="secondary" onClick={clear}>
+                Vaciar carrito
+              </Button>
+            </div>
+          </section>
+
+          <aside className="rounded-3xl border border-black/10 bg-white p-5 shadow-soft">
+            <h2 className="font-display text-2xl">Resumen</h2>
+
+            <div className="mt-5 space-y-3 text-sm">
+              <div className="flex items-center justify-between">
+                <span className="text-black/65">Subtotal</span>
+                <span>{formatMoney(subtotal, currencySymbol)}</span>
+              </div>
+
+              {discountActive ? (
+                <div className="flex items-center justify-between">
+                  <span className="text-black/65">Total con descuento</span>
+                  <span className="font-semibold">
+                    {formatMoney(total, currencySymbol)}
+                  </span>
+                </div>
+              ) : null}
+
+              {!discountActive ? (
+                <div className="flex items-center justify-between">
+                  <span className="text-black/65">Total</span>
+                  <span className="font-semibold">
+                    {formatMoney(total, currencySymbol)}
+                  </span>
+                </div>
+              ) : null}
+            </div>
+
+            <div className="mt-6">
+              <Button type="button" className="w-full" onClick={handleSendToWhatsApp}>
+                Enviar pedido por WhatsApp
+              </Button>
+            </div>
+
+            <p className="mt-3 text-xs text-black/50">
+              Al hacer clic, se abrirá WhatsApp directamente con tu pedido.
+            </p>
+          </aside>
+        </div>
+      )}
     </main>
   );
 }
