@@ -32,8 +32,8 @@ function getItemImage(item: any, basePath: string): string {
   return `${basePath}/products/${raw}`;
 }
 
-function getItemId(item: any): number | string {
-  return item?.id ?? item?.product?.id ?? "";
+function getItemId(item: any): string {
+  return String(item?.id ?? item?.product?.id ?? "");
 }
 
 function getItemQty(item: any): number {
